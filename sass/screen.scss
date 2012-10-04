@@ -1,0 +1,218 @@
+@charset "utf-8";
+@import "compass/reset";
+
+@import "h5bp";
+@include h5bp-display;
+@include h5bp-selection;
+@include h5bp-chromeframe;
+@include h5bp-media;
+@include h5bp-base;
+@include h5bp-typography;
+@include h5bp-figures;
+@include h5bp-forms;
+@include h5bp-embeds;
+@include h5bp-tables;
+//@include h5bp-links;
+//@include h5bp-lists;
+//@include h5bp-helpers;
+
+@import "compass/layout";
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/utilities";
+
+
+//border-box-sizing for all elems
+*{@include box-sizing(border-box);}
+input[type=search]{@include box-sizing(border-box);}
+
+/*VARIABLES
+--------------------------------------------*/
+//set liks color here
+$linkDefaultColor:#00539c;
+$linkHoverColor:#b53228;
+$linkActiveColor:#b53228;
+$linkVisitedColor:#810081;
+$linkFocusedColor:#b53228;
+//base font params--------------------
+$baseFontFamily: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+$baseFontSize:14px;
+$baseLineHeight: 1.4;
+//colors
+$baseFontColor: #000;
+$h1Color: #d00010;
+$servColor:#5a595e;
+$bgColor:#e3e0cc;
+
+//layout params-----------------------
+$baseMinWidth: 960px;
+$baseMaxWidth: 1600px;
+$hdrHeight:265px;
+$ftrHeight:160px;
+
+
+/*MEDIA mixins
+---------------------------------------------------------*/
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 479px) { @content; }
+  }
+  @else if $media == wide-handhelds {
+    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
+  }
+}
+
+/*HELPER CLASSES
+---------------------------------------------------------*/
+@mixin layout{
+  .l-baseWrap{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto;
+    min-width: $baseMinWidth;
+    max-width: $baseMaxWidth;
+    //@include container;
+    //@include susy-grid-background;
+  }
+  .l-contentWrap{padding-bottom: $ftrHeight !important;}
+  .l-baseFooter{
+    position: relative;
+    height: $ftrHeight;
+    margin: -$ftrHeight auto 0;
+    min-width: $baseMinWidth;
+    max-width: $baseMaxWidth;
+    //@include container;
+    //@include susy-grid-background;
+  }
+}
+//content editing zone styles
+@mixin contentEditable{}
+.contentEditable{@include contentEditable;}
+//floats
+.-f_lt{float: left;}
+.-f_rt{float: right;}
+//pseudo elems mixin
+@mixin pseudoBlockAbs{
+  content: '';
+  display: block;
+  position: absolute;
+}
+//vertical centering mixin
+@mixin vCtr{
+  display: table-cell;
+  height: inherit;
+  vertical-align: middle;
+}
+//for horisontal layouts
+@mixin hList{
+  .flexbox &{@include display-box;}
+  .no-flexbox & > *{
+    @include inline-block;
+    vertical-align: top;
+  }
+}
+@mixin justifyList{
+  .flexbox &{@include display-box;@include box-pack(justify);}
+}
+//img wrapper
+@mixin imgWrap{
+  img{width:100%;height: 100%;}
+}
+//hack for ie9 - need for gradient backgrounds
+:root .gradient {filter: none \0/IE9; }
+@mixin ie9-gradient-support{
+  $experimental-support-for-svg: true;
+  @extend .gradient;
+}
+/*OBJECTS mixins
+--------------------------------------------*/
+
+/*LAYOUT
+----------------------------------------------------------*/
+html, button, input, select, textarea {
+  height: 100%;
+  font-family: $baseFontFamily;
+  color: $baseFontColor;
+}
+body {
+  height: 100%;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  @include layout;
+  background: url(../images/bg-body.jpg);
+  position: relative;
+  &:before{
+    @include pseudoBlockAbs;
+    width:100%;
+    height: 220px;
+    @include filter-gradient(#b3e7e3cf, #00e7e3cf, vertical);
+    @include
+    @include background-image(linear-gradient(top,  rgba(231,227,207,0.7) 0%,rgba(231,227,207,0) 100%));
+  }
+}
+a {
+  @include link-colors($linkDefaultColor, $linkHoverColor, $linkActiveColor, $linkVisitedColor, $linkFocusedColor);
+  @include single-transition(all,.4s,ease,0s);
+  &.current{color:$linkHoverColor;}
+}
+input[type=number]{width:40px; text-align: center;}
+input[type=text],textarea{width:380px;}
+input[type=text]{height: 25px;}
+
+.l-baseWrap {
+}
+/* page header
+----------------------------------*/
+.l-baseHeader {
+  clear: both;
+  height: $hdrHeight;
+}
+  //main logotype
+  .b-mainLogo{
+    >a{@include vCtr;}
+  }
+  //main navigation
+  .mainLogo{
+    ul{@include hList;}
+  }
+/* page content
+------------------------------------*/
+.l-contentWrap {
+
+}
+  //main column-------------->
+  .l-columnMain{}
+  //left column-------------->
+  .l-columnLt{}
+  //right column-------------->
+  .l-columnRt{}
+
+/* Footer
+------------------------------------*/
+.baseFooter {
+}
+
+/*main page specific elements styles
+-----------------------------------------------------------------------------------------------*/
+
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
+/*plugins styles
+------------------------------------------------------------------------------------------------*/
+
+
+//debug
+* { outline: 2px dotted red; }
+* * { outline: 2px dotted green; }
+* * * { outline: 2px dotted orange; }
+* * * * { outline: 2px dotted blue; }
+* * * * * { outline: 1px solid red; }
+* * * * * * { outline: 1px solid green; }
+* * * * * * * { outline: 1px solid orange; }
+* * * * * * * * { outline: 1px solid blue; }
