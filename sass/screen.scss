@@ -14,13 +14,14 @@
 @include h5bp-tables;
 //@include h5bp-links;
 //@include h5bp-lists;
-//@include h5bp-helpers;
+@include h5bp-helpers;
+
 
 @import "compass/layout";
 @import "compass/css3";
 @import "compass/typography";
 @import "compass/utilities";
-
+@import 'sprites/icons/*.png';
 
 //border-box-sizing for all elems
 *{@include box-sizing(border-box);}
@@ -35,8 +36,8 @@ $linkActiveColor:#b53228;
 $linkVisitedColor:#810081;
 $linkFocusedColor:#b53228;
 //base font params--------------------
-$baseFontFamily: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
-$baseFontSize:14px;
+$baseFontFamily: Verdana, Geneva, sans-serif;
+$baseFontSize:13px;
 $baseLineHeight: 1.4;
 //colors
 $baseFontColor: #000;
@@ -47,7 +48,7 @@ $bgColor:#e3e0cc;
 //layout params-----------------------
 $baseMinWidth: 960px;
 $baseMaxWidth: 1600px;
-$hdrHeight:265px;
+$hdrHeight:150px;
 $ftrHeight:160px;
 
 
@@ -130,7 +131,14 @@ $ftrHeight:160px;
 }
 /*OBJECTS mixins
 --------------------------------------------*/
-
+@mixin link-only-servColor{@include link-colors($servColor, $servColor, $servColor, $servColor, $servColor);}
+@mixin link-noVisited{@include link-colors($linkDefaultColor, $linkHoverColor, $linkActiveColor, $linkVisitedColor, $linkFocusedColor);}
+@mixin link-service{
+  text-decoration: none;
+  border-bottom: 1px dashed $linkDefaultColor;
+  @include link-noVisited;
+  &:hove, &:focus{border-bottom-color: $linkHoverColor;}
+}
 /*LAYOUT
 ----------------------------------------------------------*/
 html, button, input, select, textarea {
@@ -149,9 +157,10 @@ body {
     @include pseudoBlockAbs;
     width:100%;
     height: 220px;
-    @include filter-gradient(#b3e7e3cf, #00e7e3cf, vertical);
-    @include
+    //@include filter-gradient(#b3e7e3cf, #00e7e3cf, vertical);
+    @include ie9-gradient-support;
     @include background-image(linear-gradient(top,  rgba(231,227,207,0.7) 0%,rgba(231,227,207,0) 100%));
+    z-index: -1;
   }
 }
 a {
@@ -170,26 +179,85 @@ input[type=text]{height: 25px;}
 .l-baseHeader {
   clear: both;
   height: $hdrHeight;
+  @include pie-clearfix;
+  padding:0 10px;
 }
-  //main logotype
-  .b-mainLogo{
-    >a{@include vCtr;}
+//main logotype
+.mainLogo{height: $hdrHeight;float: left;padding:0 5px;}
+.mainLogo__link{@include vCtr;}
+/*l-baseHeader__rtBlock*/
+.l-baseHeader__rtBlock{float:right;}
+.servNav{margin:15px 0;}
+.servNav__list{
+  @include hList;
+  .flexbox &{@include box-align(center);}
+}
+.servNav__link{
+  line-height: 1.1;
+  display: block;
+  margin-left: 30px;
+  font-size: 0.769em;
+  &.item-1{@include icons-sprite(servNav__item-1);width:13px; height: 11px;}
+  &.item-2{@include icons-sprite(servNav__item-2);width:11px; height: 8px;margin-top: 2px;}
+  &.item-3{@include icons-sprite(servNav__item-3);width:11px; height: 10px; margin-top: 1px;}
+}
+//main navigation
+.mainNav{overflow: hidden;@include vCtr; height: $hdrHeight;padding:0 20px;}
+.mainNav__list{@include hList;}
+.mainNav__link{
+  display: block;
+  margin-left: 30px;
+  @include link-noVisited;
+  &.m-active{@include link-only-servColor;}
+}
+/*headerContacts*/
+.headerContacts{}
+.headerContacts__phone{
+  text-align: right;
+  margin-right: 34px;
+  font-size: 1.846em;
+  sup{
+    font-size: 0.458em;
+    line-height: 1;
+    position: relative;
+    top: -14px;
   }
-  //main navigation
-  .mainLogo{
-    ul{@include hList;}
-  }
+}
+.headerContacts__contactsLink{
+  display: block;
+  float: right;
+  font-size: 0.846em;
+}
+.headerContacts__mailUsLink{
+  font-size: 0.846em;
+  clear: both;
+  display: block;
+  float: right;
+  margin-right: 65px;
+  @include link-service;
+}
 /* page content
 ------------------------------------*/
 .l-contentWrap {
 
 }
-  //main column-------------->
-  .l-columnMain{}
-  //left column-------------->
-  .l-columnLt{}
-  //right column-------------->
-  .l-columnRt{}
+//left column-------------->
+$columnLtPadding-l:70px;
+.l-columnLt{float: left;width:180px;}
+.siteMapLink{padding-left: $columnLtPadding-l;}
+.sidebar-simpleNav{
+  margin: 40px 0 40px $columnLtPadding-l;}
+.sidebar-simpleNav__link{
+  display: block;
+  margin: 10px 0;
+  font-size: 1.154em;
+  line-height: 1.2;
+}
+//right column-------------->
+.l-columnRt{float: right;width:100px;}
+//main column-------------->
+.l-columnMain{}
+
 
 /* Footer
 ------------------------------------*/

@@ -23,16 +23,37 @@
 
     <!-- HEADER -->
     <header class="l-baseHeader" itemscope itemtype='http://schema.org/WPHeader'>
-        <!--main logo-->
-        <div class="b-mainLogo">
-            <a href="index.html">
+        <!--main logo on left-->
+        <div class="mainLogo">
+            <a class="mainLogo__link" href="index.html">
                 <img src="images/logo.png" alt="">
             </a>
         </div>
-        <nav class="b-mainNav" itemscope itemtype='http://schema.org/SiteNavigationElement'>
-            <ul class="b-mainNav__list">
-                <li><a href="#" class="b-mainNav__link m-active"></a>
-                <li><a href="#" class="b-mainNav__link"></a>
+        <!--right block with info-->
+        <div class="l-baseHeader__rtBlock">
+            <!--service nav: language choise and service links-->
+            <nav class="servNav" itemscope itemtype='http://schema.org/SiteNavigationElement'>
+                <ul class="servNav__list">
+                    <li><a class="servNav__link" href="#">Українська</a></li>
+                    <li><a class="servNav__link" href="#">English</a></li>
+                    <li><a class="servNav__link item-1" href="#" title="Home page"></a></li>
+                    <li><a class="servNav__link item-2" href="#" title="Mail us"></a></li>
+                    <li><a class="servNav__link item-3" href="#" title="Site map"></a></li>
+                </ul>
+            </nav>
+            <!--header contacts block-->
+            <div class="headerContacts">
+                <address class="headerContacts__phone"><sup>+38 044</sup>455-04-52</address>
+                <a href="#" class="headerContacts__contactsLink">Контактная информация</a>
+                <a href="#" class="headerContacts__mailUsLink">Написать нам</a>
+            </div>
+        </div>
+        <!--main nav on center header-->
+        <nav class="mainNav" itemscope itemtype='http://schema.org/SiteNavigationElement'>
+            <ul class="mainNav__list">
+                <li><a href="#" class="mainNav__link m-active">О компании</a></li>
+                <li><a href="#" class="mainNav__link">Продукция</a></li>
+                <li><a href="#" class="mainNav__link">Способы доставки</a></li>
             </ul>
         </nav>
     </header>
@@ -40,25 +61,39 @@
 
     <!-- CONTENT -->
     <div class="l-contentWrap">
-        <!--breadcrumbs-->
-        <nav class="b-breadcrumbs" itemprop='breadcrumb'>
-            <ul>
-                <li><a href="#"></a></li>
-            </ul>
-        </nav>
-
-        <!--main column-->
-        <div class="l-columnMain" role="main"></div>
-        <!--end main column-->
-
         <!--left column-->
-        <aside class="l-columnLt" itemscope itemtype='http://schema.org/WPSideBar'></aside>
+        <aside class="l-columnLt" itemscope itemtype='http://schema.org/WPSideBar'>
+            <a href="#" class="siteMapLink">Весь сайт</a>
+            <nav class="sidebar-simpleNav">
+                <ul>
+                    <li><a href="#" class="sidebar-simpleNav__link">Контактная информация</a></li>
+                    <li><a href="#" class="sidebar-simpleNav__link">Новости</a></li>
+                    <li><a href="#" class="sidebar-simpleNav__link">Вакансии</a></li>
+                </ul>
+            </nav>
+            <!--sertificats-->
+            <div class="sertificats">
+                <figure>
+                    <img src="">
+                </figure>
+            </div>
+        </aside>
         <!--end left column-->
 
         <!--right column-->
         <aside class="l-columnRt" itemscope itemtype='http://schema.org/WPSideBar'></aside>
         <!--end right column-->
 
+        <!--main column-->
+        <div class="l-columnMain" role="main">
+            <!--breadcrumbs-->
+            <nav class="b-breadcrumbs" itemprop='breadcrumb'>
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--end main column-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->
 
