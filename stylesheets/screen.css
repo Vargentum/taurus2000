@@ -555,7 +555,7 @@ body .l-baseWrap {
 }
 /* line 84, ../sass/screen.scss */
 body .l-contentWrap {
-  padding-bottom: 145px !important;
+  padding-bottom: 290px !important;
 }
 /* line 85, ../sass/screen.scss */
 body .l-baseFooter {
@@ -607,30 +607,26 @@ a:hover {
 a:active {
   color: #b53228;
 }
-/* line 209, ../sass/screen.scss */
-a.current {
-  color: #b53228;
-}
 
-/* line 211, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 input[type=number] {
   width: 40px;
   text-align: center;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 input[type=text], textarea {
   width: 380px;
 }
 
-/* line 213, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 input[type=text] {
   height: 25px;
 }
 
 /* page header
 ----------------------------------*/
-/* line 219, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .l-baseHeader {
   clear: both;
   height: 150px;
@@ -644,14 +640,14 @@ input[type=text] {
   clear: both;
 }
 
-/* line 226, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 .mainLogo {
   height: 150px;
   float: left;
   padding: 0 5px;
 }
 
-/* line 227, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .mainLogo__link {
   display: table-cell;
   height: inherit;
@@ -659,12 +655,12 @@ input[type=text] {
 }
 
 /*l-baseHeader__rtBlock*/
-/* line 229, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 .l-baseHeader__rtBlock {
   float: right;
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .servNav {
   margin: 15px 0;
 }
@@ -686,7 +682,7 @@ input[type=text] {
   *display: inline;
   vertical-align: top;
 }
-/* line 233, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 .flexbox .servNav__list {
   -webkit-box-align: center;
   -moz-box-align: center;
@@ -694,27 +690,27 @@ input[type=text] {
   box-align: center;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 .servNav__link {
   line-height: 1.1;
   display: block;
   margin-left: 30px;
   font-size: 0.769em;
 }
-/* line 240, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 .servNav__link.item-1 {
   background-position: 0 -240px;
   width: 13px;
   height: 11px;
 }
-/* line 241, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .servNav__link.item-2 {
   background-position: 0 -251px;
   width: 11px;
   height: 8px;
   margin-top: 2px;
 }
-/* line 242, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .servNav__link.item-3 {
   background-position: 0 -259px;
   width: 11px;
@@ -722,7 +718,7 @@ input[type=text] {
   margin-top: 1px;
 }
 
-/* line 245, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 .mainNav {
   overflow: hidden;
   display: table-cell;
@@ -750,7 +746,7 @@ input[type=text] {
   vertical-align: top;
 }
 
-/* line 247, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .mainNav__link {
   display: block;
   margin-left: 30px;
@@ -772,7 +768,7 @@ input[type=text] {
 .mainNav__link:active {
   color: #b53228;
 }
-/* line 251, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .mainNav__link.m-active {
   color: #5a595e;
 }
@@ -794,7 +790,7 @@ input[type=text] {
 }
 
 /*headerContacts*/
-/* line 255, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .headerContacts__phone {
   display: none;
   opacity: 0;
@@ -807,7 +803,7 @@ input[type=text] {
   display: block;
   opacity: 1;
 }
-/* line 260, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .headerContacts__phone sup {
   font-size: 0.458em;
   line-height: 1;
@@ -815,14 +811,14 @@ input[type=text] {
   top: -14px;
 }
 
-/* line 267, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 .headerContacts__contactsLink {
   display: block;
   float: right;
   font-size: 0.846em;
 }
 
-/* line 272, ../sass/screen.scss */
+/* line 271, ../sass/screen.scss */
 .headerContacts__mailUsLink {
   font-size: 0.846em;
   clear: both;
@@ -856,7 +852,7 @@ input[type=text] {
 
 /* page content
 ------------------------------------*/
-/* line 282, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 .l-contentWrap {
   *zoom: 1;
 }
@@ -867,13 +863,13 @@ input[type=text] {
   clear: both;
 }
 
-/* line 287, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 .l-columnLt {
   float: left;
   width: 180px;
 }
 
-/* line 288, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 .siteMapLink {
   margin-left: 70px;
   text-decoration: none;
@@ -903,17 +899,37 @@ input[type=text] {
   border-bottom-color: #b53228;
 }
 
-/* line 294, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .sidebar-simpleNav {
-  margin: 40px 0 40px 70px;
+  margin: 60px 0 40px 70px;
 }
 
-/* line 296, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 .sidebar-simpleNav__link {
   display: block;
   margin: 10px 0;
   font-size: 1.154em;
   line-height: 1.2;
+}
+/* line 300, ../sass/screen.scss */
+.sidebar-simpleNav__link.m-active {
+  color: #5a595e;
+}
+/* line 18, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.sidebar-simpleNav__link.m-active:visited {
+  color: #5a595e;
+}
+/* line 21, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.sidebar-simpleNav__link.m-active:focus {
+  color: #5a595e;
+}
+/* line 24, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.sidebar-simpleNav__link.m-active:hover {
+  color: #5a595e;
+}
+/* line 27, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+.sidebar-simpleNav__link.m-active:active {
+  color: #5a595e;
 }
 
 /*sertificats*/
@@ -1339,17 +1355,10 @@ li:last-child .breadcrumbs__link:before {
   background-position: 0 -291px;
 }
 
-/*MODIFICATORS
-*/
-/* line 427, ../sass/screen.scss */
-.m-mainColumnPadding {
-  padding-left: 60px;
-}
-
 /*main page specific elements styles
 -----------------------------------------------------------------------------------------------*/
 /*companyMission*/
-/* line 431, ../sass/screen.scss */
+/* line 429, ../sass/screen.scss */
 .companyMission {
   width: 220px;
   margin: 0 auto;
@@ -1364,53 +1373,146 @@ li:last-child .breadcrumbs__link:before {
   line-height: 20px;
 }
 
-/* line 440, ../sass/screen.scss */
+/* line 438, ../sass/screen.scss */
 .companyMission__title {
   font-weight: bold;
 }
 
 /*ABOUT page specific elements styles
 ------------------------------------------------------------------------------------------------*/
+/*CONTACTS page specific elements styles
+------------------------------------------------------------------------------------------------*/
+/* line 443, ../sass/screen.scss */
+.pageContacts__content {
+  margin-left: 60px;
+}
+
+/* line 444, ../sass/screen.scss */
+.officeInfo {
+  *zoom: 1;
+}
+/* line 152, ../sass/screen.scss */
+.flexbox .officeInfo {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+}
+/* line 153, ../sass/screen.scss */
+.no-flexbox .officeInfo {
+  text-align: justify;
+  line-height: 0;
+  font-size: 1px;
+  text-justify: newspaper;
+  zoom: 1;
+  text-align-last: justify;
+}
+/* line 136, ../sass/screen.scss */
+.no-flexbox .officeInfo:after {
+  content: "";
+  display: inline-block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  width: 100%;
+}
+/* line 144, ../sass/screen.scss */
+.no-flexbox .officeInfo > * {
+  text-align: left;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  line-height: 1.4;
+  font-size: 13px;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.officeInfo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 445, ../sass/screen.scss */
+.officeInfo__title {
+  font-size: 1.692em;
+  margin: 5px 0;
+  position: relative;
+  left: -25px;
+}
+
+/* line 446, ../sass/screen.scss */
+.officeInfo__name {
+  font-weight: bold;
+}
+
+/* line 447, ../sass/screen.scss */
+.officeInfo__phones {
+  margin: 10px 0;
+}
+
+/* line 448, ../sass/screen.scss */
+.officeInfo__fax {
+  margin: 10px 0;
+}
+
+/* line 449, ../sass/screen.scss */
+.officeInfo__mail {
+  float: left;
+}
+/* line 449, ../sass/screen.scss */
+.officeInfo__mail:hover {
+  background: none !important;
+}
+
+/* line 450, ../sass/screen.scss */
+.l-officeInfo__addInfo {
+  max-width: 240px;
+}
+
+/* line 451, ../sass/screen.scss */
+.l-officeInfo__addInfo {
+  padding-top: 20px;
+}
+
+/* line 452, ../sass/screen.scss */
+.officeInfo__workTime {
+  font-size: 0.846em;
+  font-style: italic;
+}
+
+/* line 453, ../sass/screen.scss */
+.officeInfo__map {
+  text-align: center;
+  font-size: 0.846em;
+}
+
+/* line 454, ../sass/screen.scss */
+.officeInfo__postInfo {
+  display: block;
+  margin: 10px 0;
+}
+
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
 /*some page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 /*plugins styles
 ------------------------------------------------------------------------------------------------*/
-/* line 450, ../sass/screen.scss */
-* {
-  outline: 2px dotted red;
-}
-
-/* line 451, ../sass/screen.scss */
-* * {
-  outline: 2px dotted green;
-}
-
-/* line 452, ../sass/screen.scss */
-* * * {
-  outline: 2px dotted orange;
-}
-
-/* line 453, ../sass/screen.scss */
-* * * * {
-  outline: 2px dotted blue;
-}
-
-/* line 454, ../sass/screen.scss */
-* * * * * {
-  outline: 1px solid red;
-}
-
-/* line 455, ../sass/screen.scss */
-* * * * * * {
-  outline: 1px solid green;
-}
-
-/* line 456, ../sass/screen.scss */
-* * * * * * * {
-  outline: 1px solid orange;
-}
-
-/* line 457, ../sass/screen.scss */
-* * * * * * * * {
-  outline: 1px solid blue;
+/*MODIFICATORS
+*/
+/* line 467, ../sass/screen.scss */
+.m-mainColumnPadding {
+  padding-left: 60px;
 }

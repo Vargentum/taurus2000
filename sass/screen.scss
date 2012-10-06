@@ -81,7 +81,7 @@ $mainColPadding-l:60px;
     //@include container;
     //@include susy-grid-background;
   }
-  .l-contentWrap{padding-bottom: $ftrHeight !important;}
+  .l-contentWrap{padding-bottom: $ftrHeight*2 !important;}
   .l-baseFooter{
     position: relative;
     height: $ftrHeight;
@@ -206,7 +206,6 @@ body {
 a {
   @include link-colors($linkDefaultColor, $linkHoverColor, $linkActiveColor, $linkVisitedColor, $linkFocusedColor);
   @include single-transition(all,.4s,ease,0s);
-  &.current{color:$linkHoverColor;}
 }
 input[type=number]{width:40px; text-align: center;}
 input[type=text],textarea{width:380px;}
@@ -292,12 +291,13 @@ input[type=text]{height: 25px;}
   display: block;
 }
 .sidebar-simpleNav{
-  margin: 40px 0 40px $columnLtPadding-l;}
+  margin: 60px 0 40px $columnLtPadding-l;}
 .sidebar-simpleNav__link{
   display: block;
   margin: 10px 0;
   font-size: 1.154em;
   line-height: 1.2;
+  &.m-active{@include link-only-servColor;}
 }
 /*sertificats*/
 .sertificats{
@@ -422,9 +422,7 @@ $ftrTopPadding:60px;
   &:hover{@include icons-sprite(copy_active);}
 
 }
-/*MODIFICATORS
-*/
-.m-mainColumnPadding{padding-left: $mainColPadding-l}
+
 /*main page specific elements styles
 -----------------------------------------------------------------------------------------------*/
 /*companyMission*/
@@ -440,18 +438,40 @@ $ftrTopPadding:60px;
 .companyMission__title{font-weight: bold;}
 /*ABOUT page specific elements styles
 ------------------------------------------------------------------------------------------------*/
+/*CONTACTS page specific elements styles
+------------------------------------------------------------------------------------------------*/
+.pageContacts__content{margin-left: $mainColPadding-l;}
+.officeInfo{@include jList-singleLine;@include pie-clearfix;}
+.officeInfo__title{@include h2;position: relative;left:-25px;}
+.officeInfo__name{font-weight: bold;}
+.officeInfo__phones{margin:10px 0;}
+.officeInfo__fax{margin:10px 0;}
+.officeInfo__mail{float: left;&:hover{background: none !important;}}
+.l-officeInfo__addInfo{max-width: 240px;}
+.l-officeInfo__addInfo{padding-top: 20px;}
+.officeInfo__workTime{font-size: 0.846em;font-style: italic;}
+.officeInfo__map{text-align: center;font-size: 0.846em;}
+.officeInfo__postInfo{display: block;margin:10px 0;}
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
 /*some page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 /*plugins styles
 ------------------------------------------------------------------------------------------------*/
-
+/*MODIFICATORS
+*/
+.m-mainColumnPadding{padding-left: $mainColPadding-l}
 
 //debug
-* { outline: 2px dotted red; }
-* * { outline: 2px dotted green; }
-* * * { outline: 2px dotted orange; }
-* * * * { outline: 2px dotted blue; }
-* * * * * { outline: 1px solid red; }
-* * * * * * { outline: 1px solid green; }
-* * * * * * * { outline: 1px solid orange; }
-* * * * * * * * { outline: 1px solid blue; }
+//* { outline: 2px dotted red; }
+//* * { outline: 2px dotted green; }
+//* * * { outline: 2px dotted orange; }
+//* * * * { outline: 2px dotted blue; }
+//* * * * * { outline: 1px solid red; }
+//* * * * * * { outline: 1px solid green; }
+//* * * * * * * { outline: 1px solid orange; }
+//* * * * * * * * { outline: 1px solid blue; }
