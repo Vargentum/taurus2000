@@ -51,7 +51,9 @@ $baseMaxWidth: 1600px;
 $hdrHeight:150px;
 $ftrHeight:160px;
 
-
+//columns padding
+$columnLtPadding-l:70px;
+$mainColPadding-l:60px;
 /*MEDIA mixins
 ---------------------------------------------------------*/
 @mixin respond-to($media) {
@@ -90,8 +92,16 @@ $ftrHeight:160px;
     //@include susy-grid-background;
   }
 }
+//headers styles
+@mixin h1{color:$h1Color;font-size: 2.308em;}
+@mixin h2{font-size: 1.692em;margin:5px 0;}
+@mixin h2Left{@include h2;position: relative;left:-$mainColPadding-l;}
 //content editing zone styles
-@mixin contentEditable{}
+@mixin contentEditable{
+  h1{@include h1;}
+  h2{@include h2Left;}
+  p{margin-bottom: 20px;}
+}
 .contentEditable{@include contentEditable;}
 //floats
 .-f_lt{float: left;}
@@ -139,6 +149,7 @@ $ftrHeight:160px;
   @include link-noVisited;
   &:hove, &:focus{border-bottom-color: $linkHoverColor;}
 }
+@mixin shadow{box-shadow: 0 0 10px #adaca8;}
 /*LAYOUT
 ----------------------------------------------------------*/
 html, button, input, select, textarea {
@@ -242,7 +253,7 @@ input[type=text]{height: 25px;}
 
 }
 //left column-------------->
-$columnLtPadding-l:70px;
+
 .l-columnLt{float: left;width:180px;}
 .siteMapLink{padding-left: $columnLtPadding-l;}
 .sidebar-simpleNav{
@@ -253,21 +264,83 @@ $columnLtPadding-l:70px;
   font-size: 1.154em;
   line-height: 1.2;
 }
-//right column-------------->
-.l-columnRt{float: right;width:100px;}
-//main column-------------->
-.l-columnMain{}
+/*sertificats*/
+.sertificats{
+  margin-left: $columnLtPadding-l - 5;
+  margin-top: 300px;
+}
 
+.sertificats__item{
+  text-align: center;
+  img{@include shadow;}
+}
+.sertificats__item__title{
+  font-size:0.846em;
+  a{font-size:0.846em;}
+}
+//right column-------------->
+.l-columnRt{float: right;width:240px;}
+
+//main column-------------->
+
+.l-columnMain{
+  overflow: hidden;
+  padding:0 10px;
+}
+/*breadcrumbs*/
+.breadcrumbs{margin-left: $mainColPadding-l;}
+.breadcrumbs__list{@include hList;}
+.breadcrumbs__link{
+  @include link-only-servColor;
+  display: block;
+  position: relative;
+  margin-right: 5px;
+  padding-right: 18px;
+  &:hover{text-decoration: none;}
+  &:before{
+    content: '➤';
+    position: absolute;
+    right:0;
+    li:last-child &{display: none;}
+  }
+}
+.pageHeader{@include h1;padding-left: $mainColPadding-l;}
+.pageContent{@include contentEditable;}
 
 /* Footer
 ------------------------------------*/
 .baseFooter {
+  position: relative;
+  padding-left: 290px;
+}
+.randomProduct{
+  position: absolute;
+  left: 0; bottom:0;
+  width:290px;
+  height: $ftrHeight;
+}
+.randomProduct__link{
+  position: absolute;
+  right:0;top:0;
 }
 
+/*MODIFICATORS
+*/
+.m-mainColumnPadding{padding-left: $mainColPadding-l}
 /*main page specific elements styles
 -----------------------------------------------------------------------------------------------*/
-
-/*some page specific elements styles
+/*companyMission*/
+.companyMission{
+  width:220px;
+  margin:0 auto;
+  @include shadow;
+  @include border-radius;
+  background: #e3dfcc url(../images/bg-mission.png);
+  padding:10px 20px;
+  line-height: 20px;
+}
+.companyMission__title{font-weight: bold;}
+/*ABOUT page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 /*some page specific elements styles
 ------------------------------------------------------------------------------------------------*/
@@ -276,11 +349,11 @@ $columnLtPadding-l:70px;
 
 
 //debug
-* { outline: 2px dotted red; }
-* * { outline: 2px dotted green; }
-* * * { outline: 2px dotted orange; }
-* * * * { outline: 2px dotted blue; }
-* * * * * { outline: 1px solid red; }
-* * * * * * { outline: 1px solid green; }
-* * * * * * * { outline: 1px solid orange; }
-* * * * * * * * { outline: 1px solid blue; }
+//* { outline: 2px dotted red; }
+//* * { outline: 2px dotted green; }
+//* * * { outline: 2px dotted orange; }
+//* * * * { outline: 2px dotted blue; }
+//* * * * * { outline: 1px solid red; }
+//* * * * * * { outline: 1px solid green; }
+//* * * * * * * { outline: 1px solid orange; }
+//* * * * * * * * { outline: 1px solid blue; }
