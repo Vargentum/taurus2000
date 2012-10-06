@@ -49,7 +49,7 @@ $bgColor:#e3e0cc;
 $baseMinWidth: 960px;
 $baseMaxWidth: 1600px;
 $hdrHeight:150px;
-$ftrHeight:160px;
+$ftrHeight:145px;
 
 //columns padding
 $columnLtPadding-l:70px;
@@ -126,8 +126,31 @@ $mainColPadding-l:60px;
     vertical-align: top;
   }
 }
-@mixin justifyList{
-  .flexbox &{@include display-box;@include box-pack(justify);}
+@mixin jList{
+  text-align: justify;
+  line-height: 0;
+  font-size: 1px;
+  text-justify: newspaper;
+  zoom:1;
+  text-align-last: justify;
+  &:after{
+    content: "";
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 100%;
+  }
+  >*{
+    text-align: left;
+    @include inline-block;
+    vertical-align: top;
+    line-height: $baseLineHeight;font-size: $baseFontSize;
+  }
+}
+@mixin jList-singleLine{
+  .flexbox &{@include display-box; @include box-pack(justify);}
+  .no-flexbox &{@include jList;}
 }
 //img wrapper
 @mixin imgWrap{
@@ -139,15 +162,21 @@ $mainColPadding-l:60px;
   $experimental-support-for-svg: true;
   @extend .gradient;
 }
+
+@mixin visible_inbisible{
+  display: none;
+  opacity: 0;
+  &.m-active{display: block;opacity: 1;}
+}
 /*OBJECTS mixins
 --------------------------------------------*/
 @mixin link-only-servColor{@include link-colors($servColor, $servColor, $servColor, $servColor, $servColor);}
-@mixin link-noVisited{@include link-colors($linkDefaultColor, $linkHoverColor, $linkActiveColor, $linkVisitedColor, $linkFocusedColor);}
+@mixin link-noVisited{@include link-colors($linkDefaultColor, $linkHoverColor, $linkActiveColor, $linkDefaultColor, $linkFocusedColor);}
 @mixin link-service{
   text-decoration: none;
   border-bottom: 1px dashed $linkDefaultColor;
   @include link-noVisited;
-  &:hove, &:focus{border-bottom-color: $linkHoverColor;}
+  &:hover, &:focus{border-bottom-color: $linkHoverColor;}
 }
 @mixin shadow{box-shadow: 0 0 10px #adaca8;}
 /*LAYOUT
@@ -224,6 +253,7 @@ input[type=text]{height: 25px;}
 /*headerContacts*/
 .headerContacts{}
 .headerContacts__phone{
+  @include visible_inbisible;
   text-align: right;
   margin-right: 34px;
   font-size: 1.846em;
@@ -250,12 +280,17 @@ input[type=text]{height: 25px;}
 /* page content
 ------------------------------------*/
 .l-contentWrap {
-
+  @include pie-clearfix;
 }
 //left column-------------->
 
 .l-columnLt{float: left;width:180px;}
-.siteMapLink{padding-left: $columnLtPadding-l;}
+.siteMapLink{
+  margin-left: $columnLtPadding-l;
+  @include link-service;
+  float: left;
+  display: block;
+}
 .sidebar-simpleNav{
   margin: 40px 0 40px $columnLtPadding-l;}
 .sidebar-simpleNav__link{
@@ -295,7 +330,7 @@ input[type=text]{height: 25px;}
   display: block;
   position: relative;
   margin-right: 5px;
-  padding-right: 18px;
+  padding-right: 22px;
   &:hover{text-decoration: none;}
   &:before{
     content: '➤';
@@ -309,21 +344,84 @@ input[type=text]{height: 25px;}
 
 /* Footer
 ------------------------------------*/
-.baseFooter {
+$ftrTopPadding:60px;
+.l-baseFooter {
   position: relative;
-  padding-left: 290px;
+  @include jList-singleLine;
 }
 .randomProduct{
-  position: absolute;
-  left: 0; bottom:0;
   width:290px;
   height: $ftrHeight;
+  position: relative;
+  img{
+    position: absolute;
+    left: 0; bottom:0;
+  }
 }
 .randomProduct__link{
   position: absolute;
   right:0;top:0;
 }
+/*copyrights*/
+.copy{
+  margin-top: $ftrTopPadding;
+  display: block;
+  font-size: 0.846em;
+  color:$servColor;
+}
+/*ftrContacts*/
+.ftrContacts{
+  font-size: 0.846em;
+  margin-top: $ftrTopPadding;
+  position: relative;
+}
+.ftrContacts__title{padding-right: 3px;}
+.ftrContacts__trigger__wrap{
+  @include inline-block;
+  z-index: 1;
+  position: absolute;
+  vertical-align: top;
+  @include single-transition(all,.5s,ease,0s);
+  &:hover{
+    padding:2px 5px;
+    background: #fff;
+    @include shadow;
+    @include border-radius;
+    .ftrContacts__trigger{display: block;opacity: 1;}
+  }
+}
+.ftrContacts__trigger{
+  @include link-service;
+  float: left;
+  clear: left;
+  @include visible_inbisible;
+}
+.ftrContacts__info{@include visible_inbisible;}
+.ftrContacts__info__phone{font-size: 1.077em;display: block;}
+/*social*/
+.social{margin-top: $ftrTopPadding;}
+.social__title{@include link-service;}
+.social__buttons{margin:5px 0;@include hList;}
+.social__buttons__item{
+  display: block;
+  margin-right: 3px;
+  width:21px; height: 24px;
+  @for $i from 1 through 5{
+    &.item-#{$i}{
+      @include icons-sprite(soc-#{$i});
+      &:hover{@include icons-sprite(soc_active-#{$i});}
+    }
+  }
+}
+/*creator*/
+.creator{
+  margin-top: $ftrTopPadding +25;
+  display: block;
+  @include icons-sprite(copy);
+  width:22px; height: 22px;
+  &:hover{@include icons-sprite(copy_active);}
 
+}
 /*MODIFICATORS
 */
 .m-mainColumnPadding{padding-left: $mainColPadding-l}
@@ -349,11 +447,11 @@ input[type=text]{height: 25px;}
 
 
 //debug
-//* { outline: 2px dotted red; }
-//* * { outline: 2px dotted green; }
-//* * * { outline: 2px dotted orange; }
-//* * * * { outline: 2px dotted blue; }
-//* * * * * { outline: 1px solid red; }
-//* * * * * * { outline: 1px solid green; }
-//* * * * * * * { outline: 1px solid orange; }
-//* * * * * * * * { outline: 1px solid blue; }
+* { outline: 2px dotted red; }
+* * { outline: 2px dotted green; }
+* * * { outline: 2px dotted orange; }
+* * * * { outline: 2px dotted blue; }
+* * * * * { outline: 1px solid red; }
+* * * * * * { outline: 1px solid green; }
+* * * * * * * { outline: 1px solid orange; }
+* * * * * * * * { outline: 1px solid blue; }
