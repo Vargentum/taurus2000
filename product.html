@@ -68,10 +68,10 @@
             <!--side bar navigation with subcategories-->
             <nav class="expandedNav">
                 <ul class="expandedNav__mainList">
-                    <li class="expandendNav__mainList__item m-active">
+                    <li class="expandendNav__mainList__item">
                         <a href="#">Строительный крепёж</a>
                         <ul class="expandedNav__subList">
-                            <li class="expandedNav__subList__item"><a href="#">Анкера</a></li>
+                            <li class="expandedNav__subList__item m-active"><a href="#">Анкера</a></li>
                             <li class="expandedNav__subList__item"><a href="#">Метрический крепёж</a></li>
                             <li class="expandedNav__subList__item"><a href="#">Специальный крепёж</a></li>
                             <li class="expandedNav__subList__item"><a href="#">Дюбельная техника</a></li>
@@ -105,8 +105,8 @@
 
         <!--main column-->
         <div class="l-columnMain" role="main">
-            <!--pageCaterories template start-->
-            <div class="pageCategory">
+            <!--page PRODUCT template start-->
+            <div class="pageProduct">
                 <!--breadcrumbs-->
                 <nav class="breadcrumbs" itemprop='breadcrumb'>
                     <ul class="breadcrumbs__list">
@@ -115,46 +115,42 @@
                     </ul>
                 </nav>
                 <!--page header-->
-                <h1 class="pageCategory__title">Раздел</h1>
-                <!--categories-->
-                <div class="pageCategory__itemWrap">
-                    <!--one category-->
-                    <a href="#" class="pageCategory__item">
-                        <img src="images/categories__images/category-1/1.png" alt="">
-                        <span>Категория</span>
-                    </a>
-                    <!--one category-->
-                    <a href="#" class="pageCategory__item">
-                        <img src="images/categories__images/category-1/2.png" alt="">
-                        <span>Категория</span>
-                    </a>
-                    <!--one category-->
-                    <a href="#" class="pageCategory__item">
-                        <img src="images/categories__images/category-1/3.png" alt="">
-                        <span>Категория</span>
-                    </a>
-                    <!--one category-->
-                    <a href="#" class="pageCategory__item">
-                        <img src="images/categories__images/category-1/4.png" alt="">
-                        <span>Категория</span>
-                    </a>
-                    <!--one category-->
-                    <a href="#" class="pageCategory__item">
-                        <img src="images/categories__images/category-1/5.png" alt="">
-                        <span>Категория с очень очень очень очень длиннннным названием</span>
-                    </a>
-                    <!--one category-->
-                    <a href="#" class="pageCategory__item">
-                        <img src="images/categories__images/category-1/6.png" alt="">
-                        <span>Категория</span>
-                    </a>
-                    <!--one category-->
-                    <a href="#" class="pageCategory__item">
-                        <img src="images/categories__images/category-1/7.png" alt="">
-                        <span>Анекер распорный PSR</span>
-                    </a>
-                </div>
-            </div><!--pageCaterories template END-->
+                <h1 class="pageProduct__title">Продукт</h1>
+                <p>
+                    Предназначен для установки на трос при изготовлении
+                    петли. Предохраняет трос от перетирания, делает петлю
+                    более плавной. Широко используется в грузоподъёмных
+                    устройствах.
+                </p>
+                <h2>Материал</h2>
+                <p>
+                    Углеродистая сталь с добавками легирующих элементов,
+                    оцинкованная в белый цвет.
+                </p>
+                <table class="pageProduct__table">
+                    <caption>Размеры</caption>
+                    <tr>
+                        <th></th>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>c</th>
+                        <th>d</th>
+                        <th>d1</th>
+                        <th>кол-во</th>
+                    </tr>
+                    <tr>
+                        <td>3 mm</td>
+                        <td>22,1</td>
+                        <td>22,1</td>
+                        <td>22,1</td>
+                        <td>22,1</td>
+                        <td>22,1</td>
+                        <td>
+                            <input type="number">
+                        </td>
+                    </tr>
+                </table>
+            </div><!--pageProduct template END-->
         </div><!--end main column-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->
