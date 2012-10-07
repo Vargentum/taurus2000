@@ -62,18 +62,38 @@
 
     <!-- CONTENT -->
     <div class="l-contentWrap">
-        <!--left column-->
-        <aside class="l-columnLt" itemscope itemtype='http://schema.org/WPSideBar'>
+        <!--left column. attention: a modificator added-->
+        <aside class="l-columnLt m-width_230" itemscope itemtype='http://schema.org/WPSideBar'>
             <a href="#" class="siteMapLink">Весь сайт</a>
-            <!--side bar simple one level navigation-->
-            <nav class="sidebar-simpleNav">
-                <ul>
-                    <li><a href="contacts.html" class="sidebar-simpleNav__link">Контактная информация</a></li>
-                    <li><a href="news.html" class="sidebar-simpleNav__link">Новости</a></li>
-                    <li><a href="vacancies.html" class="sidebar-simpleNav__link">Вакансии</a></li>
+            <!--side bar navigation with subcategories-->
+            <nav class="expandedNav">
+                <ul class="expandedNav__mainList">
+                    <li class="expandendNav__mainList__item m-active">
+                        <a href="#">Строительный крепёж</a>
+                        <ul class="expandedNav__subList">
+                            <li class="expandedNav__subList__item"><a href="#">Анкера</a></li>
+                            <li class="expandedNav__subList__item"><a href="#">Метрический крепёж</a></li>
+                            <li class="expandedNav__subList__item"><a href="#">Специальный крепёж</a></li>
+                            <li class="expandedNav__subList__item"><a href="#">Дюбельная техника</a></li>
+                            <li class="expandedNav__subList__item"><a href="#">Шурупы и саморезы</a></li>
+                            <li class="expandedNav__subList__item"><a href="#">Заклёпки</a></li>
+                            <li class="expandedNav__subList__item"><a href="#">Шилинты</a></li>
+                        </ul>
+                    </li>
+                    <li class="expandendNav__mainList__item"><a href="#">Инструменты</a></li>
+                    <li class="expandendNav__mainList__item"><a href="#">Снежные цепи</a></li>
+                    <li class="expandendNav__mainList__item"><a href="#">Хомуты для труб</a></li>
+                    <li class="expandendNav__mainList__item"><a href="#">Такелаж</a></li>
+                    <li class="expandendNav__mainList__item"><a href="#">Цепи</a></li>
+                    <li class="expandendNav__mainList__item"><a href="#">Троса</a></li>
                 </ul>
             </nav>
-
+            <!--download catalog-->
+            <div class="sidebar-downloadCatalog">
+                <a href="#" class="sidebar-downloadCatalog__item item-1"><span>Полный каталог продукции</span></a>
+                <a href="#" class="sidebar-downloadCatalog__item item-2"><span>Каталог такелажа</span></a>
+                <a href="#" class="sidebar-downloadCatalog__item item-3"><span>Каталог снежных цепей</span></a>
+            </div>
         </aside>
         <!--end left column-->
 
@@ -85,7 +105,8 @@
 
         <!--main column-->
         <div class="l-columnMain" role="main">
-            <div class="pageName">
+            <!--pageCaterories template start-->
+            <div class="pageCategories">
                 <!--breadcrumbs-->
                 <nav class="breadcrumbs" itemprop='breadcrumb'>
                     <ul class="breadcrumbs__list">
@@ -94,8 +115,46 @@
                     </ul>
                 </nav>
                 <!--page header-->
-                <h1 class="pageHeader">Заголовок</h1>
-            </div><!--end pageName-->
+                <h1 class="pageCategories__title">Заголовок</h1>
+                <!--categories-->
+                <div class="pageCategories__itemWrap">
+                    <!--one category-->
+                    <a href="#" class="pageCategories__item">
+                        <img src="images/pageCategories__images/category-1/1.png" alt="">
+                        <span>Анкера</span>
+                    </a>
+                    <!--one category-->
+                    <a href="#" class="pageCategories__item">
+                        <img src="images/pageCategories__images/category-1/2.png" alt="">
+                        <span>Метрический крепёж</span>
+                    </a>
+                    <!--one category-->
+                    <a href="#" class="pageCategories__item">
+                        <img src="images/pageCategories__images/category-1/3.png" alt="">
+                        <span>Специальный крепёж</span>
+                    </a>
+                    <!--one category-->
+                    <a href="#" class="pageCategories__item">
+                        <img src="images/pageCategories__images/category-1/4.png" alt="">
+                        <span>Дюбельная техника</span>
+                    </a>
+                    <!--one category-->
+                    <a href="#" class="pageCategories__item">
+                        <img src="images/pageCategories__images/category-1/5.png" alt="">
+                        <span>Шурупы и саморезы</span>
+                    </a>
+                    <!--one category-->
+                    <a href="#" class="pageCategories__item">
+                        <img src="images/pageCategories__images/category-1/6.png" alt="">
+                        <span>Заклёпки</span>
+                    </a>
+                    <!--one category-->
+                    <a href="#" class="pageCategories__item">
+                        <img src="images/pageCategories__images/category-1/7.png" alt="">
+                        <span>Шилинты</span>
+                    </a>
+                </div>
+            </div><!--pageCaterories template END-->
         </div><!--end main column-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->
