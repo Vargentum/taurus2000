@@ -68,9 +68,9 @@
             <!--side bar simple one level navigation-->
             <nav class="sidebar-simpleNav">
                 <ul>
-                    <li><a href="contacts.html" class="sidebar-simpleNav__likn m-active">Контактная информация</a></li>
+                    <li><a href="contacts.html" class="sidebar-simpleNav__link">Контактная информация</a></li>
                     <li><a href="news.html" class="sidebar-simpleNav__link">Новости</a></li>
-                    <li><a href="vacancies.html" class="sidebar-simpleNav__link">Вакансии</a></li>
+                    <li><a href="vacancies.html" class="sidebar-simpleNav__link m-active">Вакансии</a></li>
                 </ul>
             </nav>
 
@@ -78,14 +78,15 @@
         <!--end left column-->
 
         <!--right column-->
-        <!--<aside class="l-columnRt" itemscope itemtype='http://schema.org/WPSideBar'>-->
-        <!--</aside>-->
+        <aside class="l-columnRt" itemscope itemtype='http://schema.org/WPSideBar'>
+            <div>df;asdkf;ja</div>
+        </aside>
         <!--end right column-->
 
         <!--main column-->
         <div class="l-columnMain" role="main">
-            <!--pageContacts-->
-            <div class="pageContacts">
+            <!--pageVacancies content-->
+            <div class="pageVacancies">
                 <!--breadcrumbs-->
                 <nav class="breadcrumbs" itemprop='breadcrumb'>
                     <ul class="breadcrumbs__list">
@@ -94,70 +95,102 @@
                     </ul>
                 </nav>
                 <!--page header-->
-                <h1 class="pageContacts__title">Контактная информация</h1>
-                <!--infoBlock about one of company offices (kiev office)-->
-                <h2 class="officeInfo__title">Офис в Киеве</h2>
-                <div class="officeInfo">
-                    <!--main info block on left-->
-                    <div class="l-officeInfo__mainInfo">
-                        <header class="officeInfo__name">ООО «Таурус 2000»</header>
-                        <p>ул. Шепелева, 2</p>
-                        <p>Киев, 03061, Украина</p>
-                        <address class="officeInfo__phones">
-                            <p>+38 044 455-04-52</p>
-                            <p>+38 044 408-32-08</p>
-                            <p>+38 044 408-81-36</p>
-                        </address>
-                        <address class="officeInfo__fax">+38 044 37-29-13 /факс</address>
-                        <a href="mailto:info@taurus2000.com.ua" class="officeInfo__mail">info@taurus2000.com.ua</a>
-                    </div>
-                    <!--addintional info block in center-->
-                    <div class="l-officeInfo__addInfo">
-                        <span class="officeInfo__workTime">Офис в Киеве работает ежедневно с 9:00 до 18:00 (обед с 13:00 до 13:30), кроме субботы и воскресенья</span>
-                    </div>
-                    <!--map block on right-->
-                    <div class="l-officeInfo__map">
-                        <figure class="officeInfo__map">
-                            <img src="images/officeInfo__map-1.png" alt="">
-                            <figcaption>
-                                <a href="#">Киевский офис на Яндекс Картах</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <!--infoBlock about one of company offices (donetsk office)-->
-                <h2 class="officeInfo__title">Офис в Киеве</h2>
-                <div class="officeInfo">
-                    <!--main info block on left-->
-                    <div class="l-officeInfo__mainInfo">
-                        <header class="officeInfo__name">ООО «Таурус Восток»</header>
-                        <p>ул. Куприна, 121-А</p>
-                        <p>г. Донецк, 83112, Украина</p>
-                        <p>(здание офиса «ТЕС»)</p>
-                        <address class="officeInfo__phones">
-                            <p>+38 062 208-39-91</p>
-                            <p>+38 062 208-39-92</p>
-                            <p>+38 062 349-17-45</p>
-                        </address>
-                        <a href="mailto:taurus2008@3g.ua" class="officeInfo__mail">taurus2008@3g.ua</a>
-                        <a href="mailto:taurus-vostok@yandex.ru" class="officeInfo__mail">taurus-vostok@yandex.ru</a>
-                    </div>
-                    <!--addintional info block in center-->
-                    <div class="l-officeInfo__addInfo">
-                        <span class="officeInfo__workTime">Офис в Донецке работает ежедневно с 9:00 до 17:00, кроме субботы и воскресенья</span>
-                        <span class="officeInfo__postInfo">Для почты: Украина, 83016, г. Донецк, абонентский ящик 3318</span>
-                    </div>
-                    <!--map block on right-->
-                    <div class="l-officeInfo__map">
-                        <figure class="officeInfo__map">
-                            <img src="images/officeInfo__map-2.png" alt="">
-                            <figcaption>
-                                <a href="#">Донецкий офис на Яндекс Картах</a>
-                            </figcaption>
-                        </figure>
+                <h1 class="pageVacancies__title">Вакансии</h1>
+                <!--one vacancy (in kiev)-->
+                <div class="pageVacancies__item m-inKiev">
+                    <input id="pageVacancies__item-1" name="pageVacancies" type="checkbox" checked />
+                    <label for="pageVacancies__item-1"><span>Менеджер по продажам</span></label>
+                    <div class="pageVacancies__item__content">
+                        <p>
+                            Нам очень нужен толковый и комуникабельный человек в отдел
+                            продаж, который может продать что угодно и кому угодно (хотя
+                            нам пока нужно продавать наш товар, нашим клиентам.
+                        </p>
+                        <b>От кандидата требуется:</b>
+                        <ul>
+                            <li>Опыт работы в активных продажах (успешный);
+                            <li>Желательно техническое образование;
+                            <li>Аккуратность, обязательность, клиентонаправленность;
+                            <li>Навыки работы с эл. планировщиками времени и работы
+                            <li>Нацеленность на результат (перспектива роста напрямую
+                            зависит от результата работы.
+                        </ul>
+                        <p><b>Суть работы:</b> организация встреч с клиентами, контроль
+                            результатов встреч, заключение договоров по результатам встреч,
+                            дальнейшая поддержка отношений с клиентами.
+                        </p>
+                        <dl>
+                            <dt>Возраст:</dt>
+                            <dd>от 25 до 45</dd>
+                            <dt>Образование:</dt>
+                            <dd>Высшее</dd>
+                            <dt>График работы:</dt>
+                            <dd>Полный день</dd>
+                            <dt>Опыт работы:</dt>
+                            <dd>Больше года</dd>
+                        </dl>
+                        <dl>
+                            <dt>Заработная плата:</dt>
+                            <dd>от 4 500 грн/месяц</dd>
+                            <dt>Ставка с 3-го месяца:</dt>
+                            <dd>4 500 + % или бонус</dd>
+                        </dl>
+                        <p>
+                            Плюс дополнительные плюшки в виде: бесплатного чая/кофе
+                            и печенюшек в офисе, оплачиваемого отпуска и соцпакета.
+                        </p>
                     </div>
                 </div>
-            </div><!--end pageContacts content-->
+                <!--one vacancy (in donetsk-->
+                <div class="pageVacancies__item m-inDonetsk">
+                    <input id="pageVacancies__item-2" name="pageVacancies" type="checkbox" />
+                    <label for="pageVacancies__item-2"><span>Менеджер по продажам</span></label>
+                    <div class="pageVacancies__item__content">
+                        <p>
+                            Нам очень нужен толковый и комуникабельный человек в отдел
+                            продаж, который может продать что угодно и кому угодно (хотя
+                            нам пока нужно продавать наш товар, нашим клиентам.
+                        </p>
+                        <b>От кандидата требуется:</b>
+                        <ul>
+                            <li>Опыт работы в активных продажах (успешный);
+                            <li>Желательно техническое образование;
+                            <li>Аккуратность, обязательность, клиентонаправленность;
+                            <li>Навыки работы с эл. планировщиками времени и работы
+                            <li>Нацеленность на результат (перспектива роста напрямую
+                                зависит от результата работы.
+                        </ul>
+                        <p><b>Суть работы:</b> организация встреч с клиентами, контроль
+                            результатов встреч, заключение договоров по результатам встреч,
+                            дальнейшая поддержка отношений с клиентами.
+                        </p>
+                        <dl>
+                            <dt>Возраст:</dt>
+                            <dd>от 25 до 45</dd>
+                            <dt>Образование:</dt>
+                            <dd>Высшее</dd>
+                            <dt>График работы:</dt>
+                            <dd>Полный день</dd>
+                            <dt>Опыт работы:</dt>
+                            <dd>Больше года</dd>
+                        </dl>
+                        <dl>
+                            <dt>Заработная плата:</dt>
+                            <dd>от 4 500 грн/месяц</dd>
+                            <dt>Ставка с 3-го месяца:</dt>
+                            <dd>4 500 + % или бонус</dd>
+                        </dl>
+                        <p>
+                            Плюс дополнительные плюшки в виде: бесплатного чая/кофе
+                            и печенюшек в офисе, оплачиваемого отпуска и соцпакета.
+                        </p>
+                    </div>
+                </div>
+                <div class="pageVacancies__lastItem">
+                    Вы бы хотели у нас работать, но сейчас у нас нет подходящей
+                    вакансии? Не проблема — просто <a href="#" class="pageVacancies__lastItem__link">напишите нам</a>.
+                </div>
+            </div><!--end pageVacancies-->
         </div><!--end main column-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->

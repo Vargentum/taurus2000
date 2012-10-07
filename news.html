@@ -68,8 +68,8 @@
             <!--side bar simple one level navigation-->
             <nav class="sidebar-simpleNav">
                 <ul>
-                    <li><a href="contacts.html" class="sidebar-simpleNav__likn m-active">Контактная информация</a></li>
-                    <li><a href="news.html" class="sidebar-simpleNav__link">Новости</a></li>
+                    <li><a href="contacts.html" class="sidebar-simpleNav__link">Контактная информация</a></li>
+                    <li><a href="news.html" class="sidebar-simpleNav__link m-active">Новости</a></li>
                     <li><a href="vacancies.html" class="sidebar-simpleNav__link">Вакансии</a></li>
                 </ul>
             </nav>
@@ -78,14 +78,22 @@
         <!--end left column-->
 
         <!--right column-->
-        <!--<aside class="l-columnRt" itemscope itemtype='http://schema.org/WPSideBar'>-->
-        <!--</aside>-->
+        <aside class="l-columnRt" itemscope itemtype='http://schema.org/WPSideBar'>
+            <!--sorting news by year of publication-->
+            <nav class="pageNews__yearSorter">
+                <ul>
+                    <li><a href="#" class="m-active">2012</a></li>
+                    <li><a href="#">2011</a></li>
+                    <li><a href="#">2010</a></li>
+                </ul>
+            </nav>
+        </aside>
         <!--end right column-->
 
         <!--main column-->
         <div class="l-columnMain" role="main">
-            <!--pageContacts-->
-            <div class="pageContacts">
+            <!--pageNews content-->
+            <div class="pageNews">
                 <!--breadcrumbs-->
                 <nav class="breadcrumbs" itemprop='breadcrumb'>
                     <ul class="breadcrumbs__list">
@@ -94,70 +102,67 @@
                     </ul>
                 </nav>
                 <!--page header-->
-                <h1 class="pageContacts__title">Контактная информация</h1>
-                <!--infoBlock about one of company offices (kiev office)-->
-                <h2 class="officeInfo__title">Офис в Киеве</h2>
-                <div class="officeInfo">
-                    <!--main info block on left-->
-                    <div class="l-officeInfo__mainInfo">
-                        <header class="officeInfo__name">ООО «Таурус 2000»</header>
-                        <p>ул. Шепелева, 2</p>
-                        <p>Киев, 03061, Украина</p>
-                        <address class="officeInfo__phones">
-                            <p>+38 044 455-04-52</p>
-                            <p>+38 044 408-32-08</p>
-                            <p>+38 044 408-81-36</p>
-                        </address>
-                        <address class="officeInfo__fax">+38 044 37-29-13 /факс</address>
-                        <a href="mailto:info@taurus2000.com.ua" class="officeInfo__mail">info@taurus2000.com.ua</a>
-                    </div>
-                    <!--addintional info block in center-->
-                    <div class="l-officeInfo__addInfo">
-                        <span class="officeInfo__workTime">Офис в Киеве работает ежедневно с 9:00 до 18:00 (обед с 13:00 до 13:30), кроме субботы и воскресенья</span>
-                    </div>
-                    <!--map block on right-->
-                    <div class="l-officeInfo__map">
-                        <figure class="officeInfo__map">
-                            <img src="images/officeInfo__map-1.png" alt="">
-                            <figcaption>
-                                <a href="#">Киевский офис на Яндекс Картах</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <!--infoBlock about one of company offices (donetsk office)-->
-                <h2 class="officeInfo__title">Офис в Киеве</h2>
-                <div class="officeInfo">
-                    <!--main info block on left-->
-                    <div class="l-officeInfo__mainInfo">
-                        <header class="officeInfo__name">ООО «Таурус Восток»</header>
-                        <p>ул. Куприна, 121-А</p>
-                        <p>г. Донецк, 83112, Украина</p>
-                        <p>(здание офиса «ТЕС»)</p>
-                        <address class="officeInfo__phones">
-                            <p>+38 062 208-39-91</p>
-                            <p>+38 062 208-39-92</p>
-                            <p>+38 062 349-17-45</p>
-                        </address>
-                        <a href="mailto:taurus2008@3g.ua" class="officeInfo__mail">taurus2008@3g.ua</a>
-                        <a href="mailto:taurus-vostok@yandex.ru" class="officeInfo__mail">taurus-vostok@yandex.ru</a>
-                    </div>
-                    <!--addintional info block in center-->
-                    <div class="l-officeInfo__addInfo">
-                        <span class="officeInfo__workTime">Офис в Донецке работает ежедневно с 9:00 до 17:00, кроме субботы и воскресенья</span>
-                        <span class="officeInfo__postInfo">Для почты: Украина, 83016, г. Донецк, абонентский ящик 3318</span>
-                    </div>
-                    <!--map block on right-->
-                    <div class="l-officeInfo__map">
-                        <figure class="officeInfo__map">
-                            <img src="images/officeInfo__map-2.png" alt="">
-                            <figcaption>
-                                <a href="#">Донецкий офис на Яндекс Картах</a>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div><!--end pageContacts content-->
+                <h1 class="pageNews__title">Новости</h1>
+                <!--one new-->
+                <article class="pageNews__item">
+                    <time datetime="2012-12-21">21.12.2012</time>
+                    <header class="pageNews__item__title">8 международная выставка Fastener Trade Show пройдет в ноябре 2012 года</header>
+                    <!--instead header tag, you can use simple h2 tag without any classes: styles are indentical
+                    <h2>theNew__title text</h2>-->
+                    <p>
+                        С 1 по 2 ноября 2012 года в Сучжоу (Китай), в международном
+                        выставочном центре Экспо Плаза пройдет 8 международная выставка
+                        Fastener Trade Show. Организатор выставки China Fastener Info.
+                    </p>
+                    <p>
+                        Fastener Trade Show является международной профессиональной
+                        выставкой крепежной индустрии, где будут представлены последние
+                        достижения этой отрасли. По заявлению организаторов выставки
+                        в ней примут участие более 800 китайских и зарубежных
+                        компаний.
+                    </p>
+                </article>
+                <!--one new-->
+                <article class="pageNews__item">
+                    <time datetime="2012-12-21">21.12.2012</time>
+                    <header class="pageNews__item__title">8 международная выставка Fastener Trade Show пройдет в ноябре 2012 года</header>
+                    <!--instead header tag, you can use simple h2 tag without any classes: styles are indentical
+                    <h2>theNew__title text</h2>-->
+                    <p>
+                        С 1 по 2 ноября 2012 года в Сучжоу (Китай), в международном
+                        выставочном центре Экспо Плаза пройдет 8 международная выставка
+                        Fastener Trade Show. Организатор выставки China Fastener Info.
+                    </p>
+                    <p>
+                        Fastener Trade Show является международной профессиональной
+                        выставкой крепежной индустрии, где будут представлены последние
+                        достижения этой отрасли. По заявлению организаторов выставки
+                        в ней примут участие более 800 китайских и зарубежных
+                        компаний.
+                    </p>
+                </article>
+                <!--one new-->
+                <article class="pageNews__item">
+                    <time datetime="2012-12-21">21.12.2012</time>
+                    <header class="pageNews__item__title">8 международная выставка Fastener Trade Show пройдет в ноябре 2012 года</header>
+                    <!--instead header tag, you can use simple h2 tag without any classes: styles are indentical
+                    <h2>theNew__title text</h2>-->
+                    <p>
+                        С 1 по 2 ноября 2012 года в Сучжоу (Китай), в международном
+                        выставочном центре Экспо Плаза пройдет 8 международная выставка
+                        Fastener Trade Show. Организатор выставки China Fastener Info.
+                    </p>
+                    <p>
+                        Fastener Trade Show является международной профессиональной
+                        выставкой крепежной индустрии, где будут представлены последние
+                        достижения этой отрасли. По заявлению организаторов выставки
+                        в ней примут участие более 800 китайских и зарубежных
+                        компаний.
+                    </p>
+                </article>
+                <!--view old news-->
+                <a href="#" class="pageNews__viewOldNews">Посмотреть более старые новости</a>
+            </div><!--end pageNews-->
         </div><!--end main column-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->

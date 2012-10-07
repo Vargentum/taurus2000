@@ -95,17 +95,40 @@ $mainColPadding-l:60px;
 //headers styles
 @mixin h1{color:$h1Color;font-size: 2.308em;}
 @mixin h2{font-size: 1.692em;margin:5px 0;}
-@mixin h2Left{@include h2;position: relative;left:-$mainColPadding-l;}
+@mixin h2Left{@include h2;position: relative;left:-35px;}
+@mixin h3{font-weight: bold;}
+@mixin ul{
+  margin-bottom: 15px;
+  li{
+    position: relative;
+    padding-left: 17px;
+    &:before{
+      content: '✔';
+      position: absolute;
+      left:0;
+    }
+  }
+}
+@mixin dl{
+  margin:10px 0;
+  dt{float: left;font-weight: bold;margin-right: 5px;}
+  dd{overflow: hidden;}
+}
 //content editing zone styles
 @mixin contentEditable{
   h1{@include h1;}
   h2{@include h2Left;}
-  p{margin-bottom: 20px;}
+  h3{@include h3;}
+  p{margin-bottom: 15px;}
+  ul{@include ul;}
+  dl{@include dl;}
+  em{font-style: italic;}
+  ol{list-style-type: decimal;}
 }
 .contentEditable{@include contentEditable;}
 //floats
-.-f_lt{float: left;}
-.-f_rt{float: right;}
+.m-float-l{float: left;}
+.m-float-r{float: right;}
 //pseudo elems mixin
 @mixin pseudoBlockAbs{
   content: '';
@@ -290,8 +313,7 @@ input[type=text]{height: 25px;}
   float: left;
   display: block;
 }
-.sidebar-simpleNav{
-  margin: 60px 0 40px $columnLtPadding-l;}
+.sidebar-simpleNav{margin: 60px 0 40px $columnLtPadding-l;}
 .sidebar-simpleNav__link{
   display: block;
   margin: 10px 0;
@@ -323,8 +345,13 @@ input[type=text]{height: 25px;}
   padding:0 10px;
 }
 /*breadcrumbs*/
-.breadcrumbs{margin-left: $mainColPadding-l;}
-.breadcrumbs__list{@include hList;}
+.breadcrumbs{
+  li{
+    padding:0 !important;
+    &:before{display: none;}
+  }
+}
+.breadcrumbs__list{@include hList;margin:0 !important;}
 .breadcrumbs__link{
   @include link-only-servColor;
   display: block;
@@ -339,7 +366,7 @@ input[type=text]{height: 25px;}
     li:last-child &{display: none;}
   }
 }
-.pageHeader{@include h1;padding-left: $mainColPadding-l;}
+.pageHeader{@include h1;}
 .pageContent{@include contentEditable;}
 
 /* Footer
@@ -438,11 +465,15 @@ $ftrTopPadding:60px;
 .companyMission__title{font-weight: bold;}
 /*ABOUT page specific elements styles
 ------------------------------------------------------------------------------------------------*/
+.pageAbout{@include contentEditable;margin-left: $mainColPadding-l;}
+.pageAbout__title{@include h1;}
+
 /*CONTACTS page specific elements styles
 ------------------------------------------------------------------------------------------------*/
-.pageContacts__content{margin-left: $mainColPadding-l;}
+.pageContacts{@include contentEditable; margin-left: $mainColPadding-l;}
+.pageContacts__title{@include h1;}
 .officeInfo{@include jList-singleLine;@include pie-clearfix;}
-.officeInfo__title{@include h2;position: relative;left:-25px;}
+.officeInfo__title{@include h2Left;}
 .officeInfo__name{font-weight: bold;}
 .officeInfo__phones{margin:10px 0;}
 .officeInfo__fax{margin:10px 0;}
@@ -452,12 +483,78 @@ $ftrTopPadding:60px;
 .officeInfo__workTime{font-size: 0.846em;font-style: italic;}
 .officeInfo__map{text-align: center;font-size: 0.846em;}
 .officeInfo__postInfo{display: block;margin:10px 0;}
-/*some page specific elements styles
+
+/*NEWS page specific elements styles
 ------------------------------------------------------------------------------------------------*/
-/*some page specific elements styles
+.pageNews{
+  @include contentEditable;
+  margin-left: $mainColPadding-l;
+}
+.pageNews__title{@include h1;}
+.pageNews__item{
+  margin-bottom: 20px;
+  time{color:$servColor;}
+}
+.pageNews__item__title{@include h2Left;margin-top: 0;}
+.pageNews__viewOldNews{@include link-service;}
+.pageNews__yearSorter{
+  margin:58px 50px;
+  .m-active{@include link-only-servColor;}
+}
+
+/*VACANCIES page specific elements styles
 ------------------------------------------------------------------------------------------------*/
-/*some page specific elements styles
+.pageVacancies{margin-left: $mainColPadding-l;}
+.pageVacancies__title{@include h1;}
+.pageVacancies__item{
+  label{
+    @include h2Left;
+    span{
+      @include link-service;
+      @include single-transition(all,.4s,ease,0s);
+    }
+  }
+  &.m-inKiev label:after{
+    content: 'в Киеве';
+    font-size: $baseFontSize;
+    position: relative;
+    top:-12px;
+  }
+  &.m-inDonetsk label:after{
+    content: 'в Донецке';
+    font-size: $baseFontSize;
+    position: relative;
+    top:-12px;
+  }
+  input{display: none;}
+}
+.pageVacancies__item__content{
+  @include contentEditable;
+  overflow: hidden;
+  height: 0px;
+  input:checked ~ &{height: auto;}
+  margin:10px 0;
+}
+.pageVacancies__lastItem{margin:20px 0;}
+.pageVacancies__lastItem__link{@include link-service;}
+
+/*DELIVERY page specific elements styles
 ------------------------------------------------------------------------------------------------*/
+.pageDelivery{
+  margin-left:$mainColPadding-l;
+  @include contentEditable;
+}
+.pageDelivery__title{@include h1;}
+.pageDelivery__managersInfo{
+  width:100%;margin:15px 0;
+  position: relative;
+}
+.pageDelivery__company{
+  @include pie-clearfix;
+  img{padding-left: 30px;}
+  &.item-2{img{padding-right: 40px;}}
+  &.item-4{img{padding-right: 40px;padding-top: 5px;}}
+}
 /*some page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 /*plugins styles
@@ -465,7 +562,7 @@ $ftrTopPadding:60px;
 /*MODIFICATORS
 */
 .m-mainColumnPadding{padding-left: $mainColPadding-l}
-
+.m-pt_50{padding-top:50px;}
 //debug
 //* { outline: 2px dotted red; }
 //* * { outline: 2px dotted green; }

@@ -65,27 +65,14 @@
         <!--left column-->
         <aside class="l-columnLt" itemscope itemtype='http://schema.org/WPSideBar'>
             <a href="#" class="siteMapLink">Весь сайт</a>
-            <!--side bar simple one level navigation-->
-            <nav class="sidebar-simpleNav">
-                <ul>
-                    <li><a href="contacts.html" class="sidebar-simpleNav__likn m-active">Контактная информация</a></li>
-                    <li><a href="news.html" class="sidebar-simpleNav__link">Новости</a></li>
-                    <li><a href="vacancies.html" class="sidebar-simpleNav__link">Вакансии</a></li>
-                </ul>
-            </nav>
-
+            <!--ukraine map-->
+            <img class="m-pt_50" src="images/pageDelivery__images/map-ukraine.png" alt="map-ukraine is here">
         </aside>
         <!--end left column-->
 
-        <!--right column-->
-        <!--<aside class="l-columnRt" itemscope itemtype='http://schema.org/WPSideBar'>-->
-        <!--</aside>-->
-        <!--end right column-->
-
         <!--main column-->
         <div class="l-columnMain" role="main">
-            <!--pageContacts-->
-            <div class="pageContacts">
+            <div class="pageDelivery">
                 <!--breadcrumbs-->
                 <nav class="breadcrumbs" itemprop='breadcrumb'>
                     <ul class="breadcrumbs__list">
@@ -94,70 +81,98 @@
                     </ul>
                 </nav>
                 <!--page header-->
-                <h1 class="pageContacts__title">Контактная информация</h1>
-                <!--infoBlock about one of company offices (kiev office)-->
-                <h2 class="officeInfo__title">Офис в Киеве</h2>
-                <div class="officeInfo">
-                    <!--main info block on left-->
-                    <div class="l-officeInfo__mainInfo">
-                        <header class="officeInfo__name">ООО «Таурус 2000»</header>
-                        <p>ул. Шепелева, 2</p>
-                        <p>Киев, 03061, Украина</p>
-                        <address class="officeInfo__phones">
-                            <p>+38 044 455-04-52</p>
-                            <p>+38 044 408-32-08</p>
-                            <p>+38 044 408-81-36</p>
-                        </address>
-                        <address class="officeInfo__fax">+38 044 37-29-13 /факс</address>
-                        <a href="mailto:info@taurus2000.com.ua" class="officeInfo__mail">info@taurus2000.com.ua</a>
-                    </div>
-                    <!--addintional info block in center-->
-                    <div class="l-officeInfo__addInfo">
-                        <span class="officeInfo__workTime">Офис в Киеве работает ежедневно с 9:00 до 18:00 (обед с 13:00 до 13:30), кроме субботы и воскресенья</span>
-                    </div>
-                    <!--map block on right-->
-                    <div class="l-officeInfo__map">
-                        <figure class="officeInfo__map">
-                            <img src="images/officeInfo__map-1.png" alt="">
-                            <figcaption>
-                                <a href="#">Киевский офис на Яндекс Картах</a>
-                            </figcaption>
-                        </figure>
-                    </div>
+                <h1 class="pageDelivery__title">Способы доставки</h1>
+                <p>
+                    Мы осуществляем доставку товара региональным клиентам
+                    собственными автомобилями, а также перевозчиками: «Автолюкс»,
+                    «Ночной Экспресс», «Деливери Авто» и «Мост Экспресс».
+                </p>
+                <p>
+                    За более подробной информацией обращайтесь к нашим
+                    региональным менеджерам:
+                </p>
+                <table class="pageDelivery__managersInfo">
+                    <tr>
+                        <td><b>Центральный регион</b></td>
+                        <td>Александр Герасимчук</td>
+                        <td>(050) 959-61-43 /моб.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Восточный регион</b></td>
+                        <td>Леся Наприенко</td>
+                        <td>(097) 504-96-74</td>
+                    </tr>
+                    <tr>
+                        <td><b>Южный и Западный регионы</b></td>
+                        <td>Александр Пересунько</td>
+                        <td>(067) 777-98-84 /моб.</td>
+                    </tr>
+                </table>
+                <h2>Доставка нашими автомобилями</h2>
+                <img src="images/pageDelivery__images/car.png" alt="" class="m-float-r">
+                <p>
+                    Кратенько об условиях доставки собственными автомобилями.
+                    Дать общую информации по срокам, охвату територии, авто,
+                    сориентировать по ценам. То бишь, дать всю полезнуе инфо,
+                    что бы человек мог понять, пчему и зачем ему выгодней (или
+                    не выгодней) воспользоваться вашим транспортом.
+                </p>
+                <p>
+                    Ну и ещё немного текста по доставке собственными машинами.
+                    Взаимодействие корпорации и клиента недостижимо. Медиамикс
+                    транслирует имидж, полагаясь на инсайдерскую информацию.
+                    Повышение жизненных стандартов без оглядки на авторитеты как
+                    всегда непредсказуемо. Можно предположить, что направленный
+                    маркетинг правомочен. Общество потребления притягивает
+                    ребрендинг, полагаясь на инсайдерскую информацию.
+                </p>
+                <h2>Доставка перевозчиками</h2>
+                <p>
+                    Мы осуществляет доставку товара следующими перевозчиками:
+                    «Автолюкс», «Ночной Экспресс», «Деливери Авто» и «Мост
+                    Экспресс».
+                </p>
+                <!--one delivery company-->
+                <div class="pageDelivery__company item-1">
+                    <h3>Автолюкс</h3>
+                    <img src="images/pageDelivery__images/company-1.png" alt="" class="m-float-r">
+                    <p>Повышение жизненных стандартов без оглядки на авторитеты как
+                    всегда непредсказуемо. Можно предположить, что направленный
+                    маркетинг правомочен. Общество потребления притягивает
+                    ребрендинг, полагаясь на инсайдерскую информацию.</p>
                 </div>
-                <!--infoBlock about one of company offices (donetsk office)-->
-                <h2 class="officeInfo__title">Офис в Киеве</h2>
-                <div class="officeInfo">
-                    <!--main info block on left-->
-                    <div class="l-officeInfo__mainInfo">
-                        <header class="officeInfo__name">ООО «Таурус Восток»</header>
-                        <p>ул. Куприна, 121-А</p>
-                        <p>г. Донецк, 83112, Украина</p>
-                        <p>(здание офиса «ТЕС»)</p>
-                        <address class="officeInfo__phones">
-                            <p>+38 062 208-39-91</p>
-                            <p>+38 062 208-39-92</p>
-                            <p>+38 062 349-17-45</p>
-                        </address>
-                        <a href="mailto:taurus2008@3g.ua" class="officeInfo__mail">taurus2008@3g.ua</a>
-                        <a href="mailto:taurus-vostok@yandex.ru" class="officeInfo__mail">taurus-vostok@yandex.ru</a>
-                    </div>
-                    <!--addintional info block in center-->
-                    <div class="l-officeInfo__addInfo">
-                        <span class="officeInfo__workTime">Офис в Донецке работает ежедневно с 9:00 до 17:00, кроме субботы и воскресенья</span>
-                        <span class="officeInfo__postInfo">Для почты: Украина, 83016, г. Донецк, абонентский ящик 3318</span>
-                    </div>
-                    <!--map block on right-->
-                    <div class="l-officeInfo__map">
-                        <figure class="officeInfo__map">
-                            <img src="images/officeInfo__map-2.png" alt="">
-                            <figcaption>
-                                <a href="#">Донецкий офис на Яндекс Картах</a>
-                            </figcaption>
-                        </figure>
-                    </div>
+                <!--one delivery company-->
+                <div class="pageDelivery__company item-2">
+                    <h3>Ночной Экспресс</h3>
+                    <img src="images/pageDelivery__images/company-2.png" alt="" class="m-float-r">
+                    <p>Социальная ответственность, отбрасывая подробности, отталкивает
+                    из ряда вон выходящий BTL, осознавая социальную ответственность
+                    бизнеса. Побочный PR-эффект, суммируя приведенные примеры,
+                    усиливает презентационный материал, осознавая социальную
+                    ответственность бизнеса.</p>
                 </div>
-            </div><!--end pageContacts content-->
+                <!--one delivery company-->
+                <div class="pageDelivery__company item-3">
+                    <h3>Деливери Авто</h3>
+                    <img src="images/pageDelivery__images/company-3.png" alt="" class="m-float-r">
+                    <p>До недавнего времени считалось, что точечное воздействие
+                    нетривиально. Более того, производство одновременно индуцирует
+                    жизненный цикл продукции, осознав маркетинг как производство.
+                    Общество потребления, анализируя результаты рекламной,
+                    позиционирует конвергентный повторный контакт, полагаясь
+                    на инсайдерскую информацию.</p>
+                </div>
+                <!--one delivery company-->
+                <div class="pageDelivery__company item-4">
+                    <h3>Мост Экспресс</h3>
+                    <img src="images/pageDelivery__images/company-4.png" alt="" class="m-float-r">
+                    <p>В рамках концепции Акоффа и Стэка, инвестиционный продукт
+                    многопланово концентрирует традиционный канал, не считаясь
+                    с затратами. Повышение жизненных стандартов без оглядки
+                    на авторитеты как всегда непредсказуемо.
+                    </p>
+                </div>
+            </div><!--end pageName-->
         </div><!--end main column-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->

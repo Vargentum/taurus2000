@@ -28,6 +28,7 @@ $(function(){
            $(ci).removeClass('m-active').eq(index).addClass('m-active');
            $(cp).removeClass('m-active').eq(index).addClass('m-active');
             return false;
-       })
-   })
+       });
+   });
+    $('.m-accordion').accordion();
 });

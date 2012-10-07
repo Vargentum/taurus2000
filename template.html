@@ -68,9 +68,9 @@
             <!--side bar simple one level navigation-->
             <nav class="sidebar-simpleNav">
                 <ul>
-                    <li><a href="#" class="sidebar-simpleNav__link">Контактная информация</a></li>
-                    <li><a href="#" class="sidebar-simpleNav__link">Новости</a></li>
-                    <li><a href="#" class="sidebar-simpleNav__link">Вакансии</a></li>
+                    <li><a href="contacts.html" class="sidebar-simpleNav__link">Контактная информация</a></li>
+                    <li><a href="news.html" class="sidebar-simpleNav__link">Новости</a></li>
+                    <li><a href="vacancies.html" class="sidebar-simpleNav__link">Вакансии</a></li>
                 </ul>
             </nav>
 
@@ -85,21 +85,18 @@
 
         <!--main column-->
         <div class="l-columnMain" role="main">
-            <!--breadcrumbs-->
-            <nav class="breadcrumbs" itemprop='breadcrumb'>
-                <ul class="breadcrumbs__list">
-                    <li><a href="#" class="breadcrumbs__link">Хлебные</a>
-                    <li><a href="#" class="breadcrumbs__link">Крошки</a>
-                </ul>
-            </nav>
-            <!--page header-->
-            <h1 class="pageHeader">Заголовок</h1>
-            <!--attention: modificator added!-->
-            <div class="pageContent m-mainColumnPadding">
-
-            </div>
-        </div>
-        <!--end main column-->
+            <div class="pageName">
+                <!--breadcrumbs-->
+                <nav class="breadcrumbs" itemprop='breadcrumb'>
+                    <ul class="breadcrumbs__list">
+                        <li><a href="#" class="breadcrumbs__link">Хлебные</a>
+                        <li><a href="#" class="breadcrumbs__link">Крошки</a>
+                    </ul>
+                </nav>
+                <!--page header-->
+                <h1 class="pageHeader">Заголовок</h1>
+            </div><!--end pageName-->
+        </div><!--end main column-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->
 
@@ -149,7 +146,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-<script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
