@@ -206,7 +206,7 @@ $mainColPadding-l:60px;
 @mixin vidget{
   @include shadow;
   @include border-radius;
-  background: #e3dfcc url(../images/bg-mission.png);
+  background: #e3dfcc url(../images/bg-vidget.png);
 }
 /*LAYOUT
 ----------------------------------------------------------*/
@@ -411,6 +411,7 @@ input[type=text]{height: 25px;}
 }
 /*breadcrumbs*/
 .breadcrumbs{
+  margin-top: 6px;
   li{
     padding:0 !important;
     &:before{display: none;}
@@ -422,10 +423,11 @@ input[type=text]{height: 25px;}
   display: block;
   position: relative;
   margin-right: 5px;
-  padding-right: 22px;
+  font-size: 0.692em;
+  padding-right: 12px;
   &:hover{text-decoration: none;}
   &:before{
-    content: '➤';
+    content: '/';
     position: absolute;
     right:0;
     li:last-child &{display: none;}
@@ -672,32 +674,184 @@ $ftrTopPadding:60px;
 /*PRODUCT page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 .pageProduct{
+  position: relative;
   @include contentEditable;
   h2{position: static;}
 }
-.pageProduct__title{@include h1;}
-.pageProduct__table{
-  caption{@include h2;}
-  width:90%;
-  th{font-weight: bold;text-align: center;text-transform: uppercase;}
-  td{text-align: center;border-top: 1px solid $bgWidgetColor;}
+.pageProduct__cartVidget{
+  @include vidget;
+  position: absolute;
+  right:0;top:0;
+  padding:10px 20px;
 }
+.pageProduct__cartVidget__link{
+  @include link-service;
+}
+.pageProduct__title{@include h1;}
+.pageProduct__purchase{@include pie-clearfix;}
+.pageProduct__purchase__productInfo{
+  float: left;
+  caption{@include h2;}
+  width:85%;
+  td{
+    text-align: center;
+    border-top: 1px solid $bgWidgetColor;
+    vertical-align: middle;
+    height: 30px;
+    &:first-child{text-align: left;padding-left: 10px;}
+    &:last-child{text-align: right;padding-right: 5px;}
+  }
+  .m-active td{background: #ebe8da;}
+  th{
+    @extend td;
+    border-top: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    &:last-child{text-align: right;padding-right: 15px;}
+
+  }
+  input{
+    width: 43px;
+    height: 19px;
+    padding:0 5px;
+    text-align: right;
+    @include border-radius;
+    background-color: #fff;
+    border:1px solid #c0c0c0;
+    box-shadow: inset 0 0 7px #c0c0c0;
+    &:focus{outline: none;}
+  }
+}
+.pageProduct__purchase__addInfo{
+  margin: 68px 0 0 20px;
+  float: left;
+  width:115px;
+  font-size: 0.692em;
+  font-style: italic;
+}
+.pageProduct__purchase__addLink{
+  display: block;
+  float: left;
+  margin:10px 0;
+  clear: both;
+  color:$baseFontColor !important;
+  text-decoration: none;
+  padding:5px 15px;
+  @include border-radius;
+  background-color: rgb(229,229,229);
+  @include filter-gradient(#e5e5e5, #acacac, vertical);
+  @include ie9-gradient-support;
+  @include background-image(linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(252,252,252,1) 3%,rgba(245,245,245,1) 7%,rgba(244,244,244,1) 24%,rgba(228,228,228,1) 79%,rgba(227,227,227,1) 90%,rgba(220,220,220,1) 97%,rgba(172,172,172,1) 100%));
+}
+.pageProduct__draft{margin:30px 0;}
+.PageProduct__photo{
+  margin-top: 5px;
+  float: right;
+  width:300px; height: 300px;
+  .bjqs-markers{list-style: none;}
+  .bjqs-markers li{margin:0 3px;}
+  .bjqs-markers a{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #9b9a9e;
+    text-indent: -9999px;
+  }
+  .bjqs-markers .active-marker a{background: #5a595e;}
+}
+/*pageProduction page specific elements styles
+------------------------------------------------------------------------------------------------*/
+.pageProduction{
+  position: relative;
+  .breadcrumbs{margin-left: 260px;}
+}
+.l-pageProduction__leftColumn{
+  position: absolute;
+  top:-7px;
+  padding-left: 70px;
+  width:230px;
+}
+
+.pageProduction__title{@include h1;margin-left: 260px;}
+.pageProduction__hexagon{text-align: center;margin-top: 30px;}
+.pageProduction__hexagon__item{
+  @include inline-block;
+  vertical-align: top;
+  position: relative;
+  @include transition-duration(1s);
+  @include filter(blur(.15em));
+  span{
+    font-size: 1.385em;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    text-align: left;
+    top:100%;
+    color:$linkDefaultColor !important;
+    text-decoration: underline;
+    left:50%;
+    white-space: nowrap;
+  }
+  &:nth-child(1){
+    z-index:6; margin-top: 205px;
+    span{left:-50%;}
+  }
+  &:nth-child(2){z-index: 5;margin-top: 180px;margin-left:-15px;}
+  &:nth-child(3){z-index: 4;margin-top: 50px;margin-left:-47px;}
+  &:nth-child(4){
+    z-index: 1;margin-top: 40px;margin-left:-50px;
+    span{top:auto;bottom:100%;}
+  }
+  &:nth-child(5){z-index: 2;margin-top: 15px;margin-left: -40px;}
+  &:nth-child(6){
+    z-index: 3;margin-left: -22px;
+    span{top:auto;bottom:100%;}
+  }
+  &:hover{
+    @include filter(blur(0));
+    z-index: 10;
+    span{display: block;opacity: 1;}
+  }
+}
+
+.pageProduction__catalogs{margin:30px 0;}
+.pageProduction__catalogs__item{
+  @include inline-block;
+  vertical-align: top;
+  width:190px;
+  margin-left: 20px;
+  text-align: center;
+  img{
+    @include box-shadow(3px 4px 8px rgba(0,0,0,.3));
+    @include single-transition(all,.4s,ease,0s);
+  }
+  span{display: block;margin-top: 7px; text-align: center;}
+  &:hover img{box-shadow: none;}
+}
+/*some page specific elements styles
+------------------------------------------------------------------------------------------------*/
 /*some page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 /*plugins styles
 ------------------------------------------------------------------------------------------------*/
+/* Basic jQuery Slider essential styles */
+
+ul.bjqs{position:relative; list-style:none;padding:0;margin:0;overflow:hidden; display:none;li:before{display: none;}}
+li.bjqs-slide{position:absolute; display:none;}
+ul.bjqs-controls{list-style:none;margin:0;padding:0;z-index:9999;}
+ul.bjqs-controls.v-centered li a{position:absolute;}
+ul.bjqs-controls.v-centered li.bjqs-next a{right:0;}
+ul.bjqs-controls.v-centered li.bjqs-prev a{left:0;}
+ol.bjqs-markers{list-style: none; padding: 0; margin: 0; width:100%;}
+ol.bjqs-markers.h-centered{text-align: center;}
+ol.bjqs-markers li{display:inline;}
+ol.bjqs-markers li a{display:inline-block;}
+p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bottom:0;}
 /*MODIFICATORS
 */
 .m-mainColumnPadding{padding-left: $mainColPadding-l}
 .m-pt_50{padding-top:50px;}
-/*for a wider left column*/
 .m-width_230{width:230px;}
 //debug
 //* { outline: 2px dotted red; }
-//* * { outline: 2px dotted green; }
-//* * * { outline: 2px dotted orange; }
-//* * * * { outline: 2px dotted blue; }
-//* * * * * { outline: 1px solid red; }
-//* * * * * * { outline: 1px solid green; }
-//* * * * * * * { outline: 1px solid orange; }
-//* * * * * * * * { outline: 1px solid blue; }
+//* { outline: 2px dotted red; }

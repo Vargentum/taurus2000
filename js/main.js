@@ -30,5 +30,21 @@ $(function(){
             return false;
        });
    });
-    $('.m-accordion').accordion();
+
+    $('.pageProduct__purchase__productInfo input').each(function(){
+        $(this).focusin(function(){
+            $(this).parents('tr').addClass('m-active');
+        });
+        $(this).focusout(function(){
+            $(this).parents('tr').removeClass('m-active');
+        });
+    });
+});
+
+$(function(){
+    $('.PageProduct__photo').bjqs({
+        'height' : 300,
+        'width' : 300,
+        'showcontrols': false
+    });
 });
