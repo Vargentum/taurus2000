@@ -2363,11 +2363,6 @@ input:checked ~ .pageVacancies__item__content {
   margin-left: 60px;
 }
 
-/* line 700, ../sass/screen.scss */
-.pageCategory__itemWrap {
-  text-align: center;
-}
-
 /* line 701, ../sass/screen.scss */
 .pageCategory__item {
   display: -moz-inline-stack;
@@ -2377,7 +2372,7 @@ input:checked ~ .pageVacancies__item__content {
   zoom: 1;
   *display: inline;
   vertical-align: top;
-  width: 220px;
+  width: 30%;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -2475,7 +2470,6 @@ input:checked ~ .pageVacancies__item__content {
 
 /* line 731, ../sass/screen.scss */
 .pageCategorySub__tabs__item {
-  text-align: center;
   display: none;
 }
 
@@ -2488,7 +2482,7 @@ input:checked ~ .pageVacancies__item__content {
   zoom: 1;
   *display: inline;
   vertical-align: top;
-  width: 220px;
+  width: 30%;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -2762,7 +2756,7 @@ input:checked ~ .pageVacancies__item__content {
   background: #5a595e;
 }
 
-/*pageProduction page specific elements styles
+/*PRODUCTION page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 /* line 820, ../sass/screen.scss */
 .pageProduction {

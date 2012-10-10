@@ -697,11 +697,11 @@ $ftrTopPadding:60px;
   .breadcrumbs{margin-left: $mainColPadding-l;}
 }
 .pageCategory__title{@include h1;margin-left: $mainColPadding-l;}
-.pageCategory__itemWrap{text-align: center;}
+.pageCategory__itemWrap{}
 .pageCategory__item{
   @include inline-block;
   vertical-align: top;
-  width: 220px;
+  width:30%;
   margin-bottom: 30px;
   text-align: center;
   span{
@@ -728,11 +728,11 @@ $ftrTopPadding:60px;
     }
   }
 }
-.pageCategorySub__tabs__item{text-align: center;display: none;}
+.pageCategorySub__tabs__item{display: none;}
 .pageCategorySub__item{
   @include inline-block;
   vertical-align: top;
-  width: 220px;
+  width: 30%;
   margin-bottom: 30px;
   text-align: center;
   span{
@@ -815,7 +815,7 @@ $ftrTopPadding:60px;
   }
   .bjqs-markers .active-marker a{background: #5a595e;}
 }
-/*pageProduction page specific elements styles
+/*PRODUCTION page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 .pageProduction{
   position: relative;
