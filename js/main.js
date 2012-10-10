@@ -39,12 +39,34 @@ $(function(){
             $(this).parents('tr').removeClass('m-active');
         });
     });
+    $('.pageProduction').parents('body').addClass('m-vidget_bg');
 });
-
 $(function(){
-    $('.PageProduct__photo').bjqs({
+    $("a[rel]").overlay({
+        mask: {
+            color: '#000',
+            loadSpeed: 500,
+            opacity: 0.65
+        },
+        effect: 'apple'
+    });
+});
+$(function(){
+    $('.pageCategorySub__nav').tabs('.pageCategorySub__tabs > div');
+});
+$(function(){
+    $('.pageProduct__photo').bjqs({
         'height' : 300,
         'width' : 300,
         'showcontrols': false
+    });
+});
+$(function(){
+    $('.pageIndex__slider__wrap').bjqs({
+        'height' : 360,
+        'width' : 950,
+        'showcontrols': true,
+        'showmarkers': false,
+        'autoplay': false
     });
 });

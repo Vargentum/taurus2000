@@ -2,7 +2,7 @@
 <!--[if IE 7]> <html class="no-js ie7 all-ie" lang="en"> <![endif]-->
 <!--[if IE 8]> <html class="no-js ie8 all-ie" lang="en"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie9 all-ie" lang="en"> <![endif]-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -46,7 +46,7 @@
                 <address class="headerContacts__phone m-active"><sup>+38 044</sup>455-04-52</address>
                 <address class="headerContacts__phone"><sup>+38 062</sup> 208-39-91</address>
                 <a href="#" class="headerContacts__contactsLink">Контактная информация</a>
-                <a href="#" class="headerContacts__mailUsLink">Написать нам</a>
+                <a href="#" class="headerContacts__mailUsLink" rel="#contact__overlay">Написать нам</a>
             </div>
         </div>
         <!--main nav on center header-->
@@ -62,157 +62,366 @@
 
     <!-- CONTENT -->
     <div class="l-contentWrap">
-        <!--left column-->
-        <aside class="l-columnLt" itemscope itemtype='http://schema.org/WPSideBar'>
-            <a href="#" class="siteMapLink">Весь сайт</a>
-            <nav class="sidebar-simpleNav">
-                <ul>
-                    <li><a href="contacts.html" class="sidebar-simpleNav__link">Контактная информация</a></li>
-                    <li><a href="news.html" class="sidebar-simpleNav__link">Новости</a></li>
-                    <li><a href="vacancies.html" class="sidebar-simpleNav__link">Вакансии</a></li>
+        <!--pageIndex template start-->
+        <div class="pageIndex">
+            <a href="#" class="pageIndex__siteMapLink" rel="#sitemap__overlay">Весь сайт</a>
+            <!-- start Basic Jquery Slider -->
+            <div class="pageIndex__slider__wrap">
+                <ul class="bjqs">
+                    <li class="pageIndex__slider">
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/1.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/2.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/3.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/4.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/5.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/6.png" alt="">
+                        </a>
+                    </li>
+                    <li class="pageIndex__slider">
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/1.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/2.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/3.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/4.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/5.png" alt="">
+                        </a>
+                        <!--one hexagon-->
+                        <a href="#" class="pageIndex__slider__item">
+                            <img src="images/pageProduction/6.png" alt="">
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-            <!--sertificats-->
-            <div class="sertificats">
-                <!--one sertificat-->
-                <figure class="sertificats__item">
-                    <img src="images/tmp/diploma.jpg" alt="">
-                    <figcaption class="sertificats__item__title">
-                        <a href="#">Диплом участника выставки «Электрика 2012»</a>
-                    </figcaption>
-                </figure>
-            </div>
-        </aside>
-        <!--end left column-->
-
-        <!--right column-->
-        <aside class="l-columnRt" itemscope itemtype='http://schema.org/WPSideBar'>
-            <div class="companyMission">
-                <header class="companyMission__title">Миссия компании</header>
-                <div class="companyMission__text">
-                    Смысл существования
-                    компании с позиции
-                    удовлетворения
-                    потребностей клиентов,
-                    реализации конкурентных
-                    приемуществ, мотивации
-                    сотрудников компании.
+            </div><!-- end Basic jQuery Slider -->
+            <!--new production-->
+            <div class="pageIndex__newProduction">
+                <header class="pageIndex__newProduction__title">Новая продукция</header>
+                <div class="pageIndex__newProduction__content">
+                    <!--item-->
+                    <a href="#" class="pageIndex__newProduction__item">
+                        <img src="images/pageIndex/news__item-1.png" alt="">
+                        <span>Дюбель распорный NT</span>
+                    </a>
+                    <!--item-->
+                    <a href="#" class="pageIndex__newProduction__item">
+                        <img src="images/pageIndex/news__item-2.png" alt="">
+                        <span>Болт с полной резьбой цинкованный Din 933</span>
+                    </a>
+                    <!--item-->
+                    <a href="#" class="pageIndex__newProduction__item">
+                        <img src="images/pageIndex/news__item-3.png" alt="">
+                        <span>Хомут металлический с гайкой</span>
+                    </a>
                 </div>
             </div>
-        </aside>
-        <!--end right column-->
-
-        <!--main column-->
-        <div class="l-columnMain" role="main">
-            <!--breadcrumbs-->
-            <nav class="breadcrumbs" itemprop='breadcrumb'>
-                <ul class="breadcrumbs__list">
-                    <li><a href="#" class="breadcrumbs__link">Хлебные</a>
-                    <li><a href="#" class="breadcrumbs__link">Крошки</a>
-                </ul>
-            </nav>
-            <h1 class="pageHeader">О компании</h1>
-            <!--attention: modificator added!-->
-            <div class="pageContent m-mainColumnPadding">
-                <p>Здесь нужно накреативить немного текста про компанию. Потому
-                как то, что есть сейчас на старом сайте — очень, очень плохо.
-                Текста должно быть не очень много — примерно лист А4 десятым
-                кеглем.</p>
-                <p>Текст должен понятно и не скушно (кроме того, что предоставить
-                читателю информацию о компании) составить исключительно
-                положительное мнение о компании, как таковой.</p>
-                <p>Главное особо не лить воду, а кратко и по существу, донести
-                до забредшего в этот раздел, посетителя, что такое наша
-                компания, чем мы жевём, дышим, чем руководствуемся, что
-                предлагаем и куда идём. Для тех, кому влом читать, маленький
-                блок справа с миссией компании, даст общее представление
-                о компании.</p>
-                <h2>
-                    Ключевые моменты можно (и нужно) выделить
-                    бóльшим размером шрифта, что бы поставить
-                    нужные акценты.
-                </h2>
-                <p>Как показывает практика режимных наблюдений в этих полевых
-                    условиях, педотубула охлаждает лёс, хотя этот факт нуждается
-                    в дальнейшей тщательной экспериментальной проверке. Порода
-                    по определению принципиально неизмерима. Новообразование
-                    увлажняет псевдомицелий как при нагреве, так и при локальном
-                    охлаждении. Увлажнение приводит к появлению межагрегатный
-                    фингер-эффект, все дальнейшее далеко выходит за все рамки
-                    текущего исследования и не будет здесь рассматриваться.
-                </p>
+            <!--about block-->
+            <div class="pageIndex__about">
+                <header class="pageIndex__about__title">О компании</header>
                 <p>
-                    В связи с этим нужно подчеркнуть, что дождевание экстремально
-                    вымывает в бугор пучения, хотя этот факт нуждается в очень
-                    дальнейшей тщательной экспериментальной проверке.
+                    Здесь нужно накреативить немного текста про компанию. Совсем кратко,
+                    буквально в один абзац, что бы новые посетители понимали куда они попали,
+                    что из себя представляет компания, чем она занимается и что им предлагает.
+                    Должно  быть примерно четыре-пять строк.
                 </p>
             </div>
-        </div>
-        <!--end main column-->
+            <div class="pageIndex__news">
+                <header class="pageIndex__news__title">Новости</header>
+                <a href="#" class="pageIndex__news__bnr">
+                    <img src="images/pageIndex/banner.jpg" alt="">
+                </a>
+                <!--one-->
+                <div class="pageIndex__news__item">
+                    <time datetime="2012-12-21">21 января 2012</time>
+                    <a href="#">8 международная выставка Fastener Trade Show пройдет в ноябре 2012 года</a>
+                </div>
+                <!--one-->
+                <div class="pageIndex__news__item">
+                    <time datetime="2012-12-21">21 января 2012</time>
+                    <a href="#">8 международная выставка Fastener Trade Show пройдет в ноябре 2012 года</a>
+                </div>
+                <!--one-->
+                <div class="pageIndex__news__item">
+                    <time datetime="2012-12-21">21 января 2012</time>
+                    <a href="#">8 международная выставка Fastener Trade Show пройдет в ноябре 2012 года</a>
+                </div>
+                <!--one-->
+                <div class="pageIndex__news__item">
+                    <time datetime="2012-12-21">21 января 2012</time>
+                    <a href="#">В Украине наметился рост строительного сектора, что повлияет на рост продаж строительного крепежа</a>
+                </div>
+                <!--one-->
+                <div class="pageIndex__news__item">
+                    <time datetime="2012-12-21">21 января 2012</time>
+                    <a href="#">Обновлён общий каталог продукции</a>
+                </div>
+            </div>
+
+
+            <!--info-->
+            <div class="pageIndex__info">
+                <div class="pageIndex__info__text">
+                    <header class="pageIndex__info__text__title">Информационный блок</header>
+                    <p>
+                        Информационный блок, в котором можно размещать
+                        любую важную, на данный момент, информацию.
+                        Ну например: горячая вакансия, скидка на товар,
+                        поздравления, объявления и т. д.
+                    </p>
+                </div>
+                <div class="pageIndex__info__catalogs">
+                    <a href="#" class="pageIndex__info__catalogs__item">
+                        <img src="images/catalog__covers/large-1.jpg" alt="">
+                        <span>Полный каталог продукции</span>
+                    </a>
+                    <a href="#" class="pageIndex__info__catalogs__item">
+                        <img src="images/catalog__covers/large-2.jpg" alt="">
+                        <span>Каталог такелажа</span>
+                    </a>
+                    <a href="#" class="pageIndex__info__catalogs__item">
+                        <img src="images/catalog__covers/large-3.jpg" alt="">
+                        <span>Каталог снежных цепей</span>
+                    </a>
+                </div>
+            </div><!--end catalogs-->
+        </div><!--pageProduction template END-->
     </div><!-- END CONTENT -->
 </div><!-- END WRAPPER -->
 
 <!-- FOOTER -->
 <footer class="l-baseFooter" itemscope itemtype='http://schema.org/WPFooter'>
     <!--random product-->
-    <figure class="randomProduct">
-        <img src="images/tmp/image-randomProduct.png" alt="">
+    <!--<figure class="randomProduct item-1">-->
+        <!--<img src="images/ftr__images/1.png" alt="">-->
+        <!--<figcaption>-->
+            <!--<a href="#" class="randomProduct__link">Снежные цепи</a>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--<figure class="randomProduct item-2">-->
+        <!--<img src="images/ftr__images/2.png" alt="">-->
+        <!--<figcaption>-->
+            <!--<a href="#" class="randomProduct__link">Гайки</a>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--<figure class="randomProduct item-3">-->
+        <!--<img src="images/ftr__images/3.png" alt="">-->
+        <!--<figcaption>-->
+            <!--<a href="#" class="randomProduct__link">Болты</a>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--<figure class="randomProduct item-4">-->
+        <!--<img src="images/ftr__images/4.png" alt="">-->
+        <!--<figcaption>-->
+            <!--<a href="#" class="randomProduct__link">Зажим для троса</a>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--<figure class="randomProduct item-5">-->
+        <!--<img src="images/ftr__images/5.png" alt="">-->
+        <!--<figcaption>-->
+            <!--<a href="#" class="randomProduct__link">Анкер двухраспорный</a>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--<figure class="randomProduct item-6">-->
+        <!--<img src="images/ftr__images/6.png" alt="">-->
+        <!--<figcaption>-->
+            <!--<a href="#" class="randomProduct__link">Дюбель распорный</a>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <!--<figure class="randomProduct item-7">-->
+        <!--<img src="images/ftr__images/7.png" alt="">-->
+        <!--<figcaption>-->
+            <!--<a href="#" class="randomProduct__link">Карабин пожарныйи</a>-->
+        <!--</figcaption>-->
+    <!--</figure>-->
+    <figure class="randomProduct item-8">
+        <img src="images/ftr__images/8.png" alt="">
         <figcaption>
-            <a href="#" class="randomProduct__link">Снежные цепи</a>
+            <a href="#" class="randomProduct__link">Трос</a>
         </figcaption>
     </figure>
-    <!--copyright-->
-    <small class="copy">© Таурус 2000, 2007–2012</small>
-    <!--address-->
-    <address class="ftrContacts">
-        <span class="ftrContacts__title">Мы в</span>
-        <div class="ftrContacts__trigger__wrap">
-            <a href="#" class="ftrContacts__trigger m-active">Киеве</a>
-            <a href="#" class="ftrContacts__trigger">Донецке</a>
+    <div class="m-footer__justifyList">
+        <!--copyright-->
+        <small class="copy">© Таурус 2000, 2007–2012</small>
+        <!--address-->
+        <address class="ftrContacts">
+            <span class="ftrContacts__title">Мы в</span>
+            <div class="ftrContacts__trigger__wrap">
+                <a href="#" class="ftrContacts__trigger m-active">Киеве</a>
+                <a href="#" class="ftrContacts__trigger">Донецке</a>
+            </div>
+            <div class="ftrContacts__info m-active">
+                <span class="ftrContacts__info__phone">+38 044 455-04-52</span>
+                ул. Шепелева, 2
+            </div>
+            <div class="ftrContacts__info">
+                <span class="ftrContacts__info__phone">+38 062 208-39-91</span>
+                ул. Куприна, 121-А
+            </div>
+        </address>
+        <!--social block-->
+        <div class="social">
+            <a href="#" class="social__title">
+                Написать нам
+                <span class="social__title__tooltip">Для быстрого контакта с нами, можно воспользоваться формой обратной связи</span>
+            </a>
+            <ul class="social__buttons">
+                <li><a href="#" class="social__buttons__item item-1"></a>
+                <li><a href="#" class="social__buttons__item item-2"></a>
+                <li><a href="#" class="social__buttons__item item-3"></a>
+                <li><a href="#" class="social__buttons__item item-4"></a>
+                <li><a href="#" class="social__buttons__item item-5"></a>
+            </ul>
         </div>
-        <div class="ftrContacts__info m-active">
-            <span class="ftrContacts__info__phone">+38 044 455-04-52</span>
-            ул. Шепелева, 2
-        </div>
-        <div class="ftrContacts__info">
-            <span class="ftrContacts__info__phone">+38 062 208-39-91</span>
-            ул. Куприна, 121-А
-        </div>
-    </address>
-    <!--social block-->
-    <div class="social">
-        <a href="#" class="social__title">Написать нам</a>
-        <ul class="social__buttons">
-            <li><a href="#" class="social__buttons__item item-1"></a>
-            <li><a href="#" class="social__buttons__item item-2"></a>
-            <li><a href="#" class="social__buttons__item item-3"></a>
-            <li><a href="#" class="social__buttons__item item-4"></a>
-            <li><a href="#" class="social__buttons__item item-5"></a>
-        </ul>
+        <!--creator info-->
+        <a href="http://scona.com.ua/" class="creator" target="_blank" title="Дизайн сайта - Scona Graphics"></a>
     </div>
-    <!--creator info-->
-    <a href="http://scona.com.ua/" class="creator" target="_blank" title="Дизайн сайта - Scona Graphics"></a>
 </footer>
 <!-- END FOOTER -->
 
-<nav style="position: fixed;left:0; top:0; background: #fff; border-radius: 0 0 15px 0; padding:10px 20px 20px;">
-    <header style="font-size: 18px; padding-bottom: 10px;">Навигация </header>
-    <ul>
-        <li><a href="index.html">Главная (пока не готова)</a></li>
-	<li><a href="category.html">Категория товаров</a></li>
-	<li><a href="sub-category.html">Подкатегория товаров</a></li>
-	<li><a href="about.html">О компании</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="news.html">Новости</a></li>
-        <li><a href="vacancies.html">Вакансии</a></li>
+<div class="sitemap__overlay" id="sitemap__overlay">
+    <header>
+        <!--<a href="#" class="overlay__close"></a>-->
+        <a href="#" class="sitemap__overlay__link">Весь сайт</a>
+        <span class="sitemap__overlay__location">Вы сейчас находитесь здесь:<span> О компании</span></span>
+    </header>
+    <ul class="sitemap__overlay__mainList">
+        <li><a href="#">Главная страница</a></li>
+        <li>
+            <a class="m-active" href="#">О компании</a>
+            <ul class="sitemap__overlay__subList-1">
+                <li><a href="#">Контактная информация</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Вакансии</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Продукция</a>
+            <ul class="sitemap__overlay__subList-1 m-li_inlineBlock">
+                <li>
+                    <a href="#">Строительный крепеж</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Анкера</a></li>
+                        <li><a href="#">Метрический крепёж</a></li>
+                        <li><a href="#">Специальный крепёж</a></li>
+                        <li><a href="#">Дюбельная техника</a></li>
+                        <li><a href="#">Шурупы и саморезы</a></li>
+                        <li><a href="#">Заклёпки</a></li>
+                        <li><a href="#">Шилинты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Инструменты</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Биты</a></li>
+                        <li><a href="#">Свёрла</a></li>
+                        <li><a href="#">Круги Luga</a></li>
+                        <li><a href="#">Заклёпочник</a></li>
+                        <li><a href="#">Приспособления Molly</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Снежные цепи</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Декоративные</a></li>
+                        <li><a href="#">Цепи к/з</a></li>
+                        <li><a href="#">Цепи д/з</a></li>
+                        <li><a href="#">Технические цепи</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Хомуты для труб</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">С резиновым вкладишем</a></li>
+                        <li><a href="#">Двойной хомут</a></li>
+                        <li><a href="#">Пластиковый хомут</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Такелаж</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Талрепы</a></li>
+                        <li><a href="#">Зажимы для троса</a></li>
+                        <li><a href="#">Коуши</a></li>
+                        <li><a href="#">Карабины</a></li>
+                        <li><a href="#">Соеденители</a></li>
+                        <li><a href="#">Крюки</a></li>
+                        <li><a href="#">Блоки</a></li>
+                        <li><a href="#">Рым-болты/гайки</a></li>
+                        <li><a href="#">Шплинты</a></li>
+                        <li><a href="#">Элементы талрепов</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Цепи</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Грузовые цепи</a></li>
+                        <li><a href="#">Пластиковые цепи</a></li>
+                        <li><a href="#">Декоративные цепи</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Троса</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Первай вид</a></li>
+                        <li><a href="#">Второй вид</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Способы доставки</a></li>
     </ul>
-</nav>
-
+</div>
+<!--feedback-->
+<div class="contact__overlay" id="contact__overlay">
+    <header class="contact__overlay__title">Обратная связь</header>
+    <label>
+        <span>Ваше имя:</span>
+        <input type="text">
+    </label>
+    <label>
+        <span>Ваш телефон или электронная почта:</span>
+        <input type="text">
+    </label>
+    <label>
+        <span>Сообщение:</span>
+        <textarea></textarea>
+    </label>
+    <button>Отправить</button>
+</div>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+<script src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
+<script src="js/plugins/bjqs-1.3.min.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.

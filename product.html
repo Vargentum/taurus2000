@@ -64,7 +64,7 @@
     <div class="l-contentWrap">
         <!--left column. attention: a modificator added-->
         <aside class="l-columnLt m-width_230" itemscope itemtype='http://schema.org/WPSideBar'>
-            <a href="#" class="siteMapLink">Весь сайт</a>
+            <a href="#" class="siteMapLink" rel="#sitemap__overlay">Весь сайт</a>
             <!--side bar navigation with subcategories-->
             <nav class="expandedNav">
                 <ul class="expandedNav__mainList">
@@ -122,7 +122,7 @@
                 <!--page header-->
                 <h1 class="pageProduct__title">Продукт</h1>
                 <!--PageProduct__photo-->
-                <div class="PageProduct__photo">
+                <div class="pageProduct__photo">
                     <!-- start Basic Jquery Slider -->
                     <ul class="bjqs">
                         <li><img src="images/tmp/image-product.png" alt=""></li>
@@ -270,49 +270,148 @@
 <!-- FOOTER -->
 <footer class="l-baseFooter" itemscope itemtype='http://schema.org/WPFooter'>
     <!--random product-->
-    <figure class="randomProduct">
-        <img src="images/tmp/image-randomProduct.png" alt="">
+    <figure class="randomProduct item-1">
+        <img src="images/ftr__images/1.png" alt="">
         <figcaption>
             <a href="#" class="randomProduct__link">Снежные цепи</a>
         </figcaption>
     </figure>
-    <!--copyright-->
-    <small class="copy">© Таурус 2000, 2007–2012</small>
-    <!--address-->
-    <address class="ftrContacts">
-        <span class="ftrContacts__title">Мы в</span>
-        <div class="ftrContacts__trigger__wrap">
-            <a href="#" class="ftrContacts__trigger m-active">Киеве</a>
-            <a href="#" class="ftrContacts__trigger">Донецке</a>
+    <div class="m-footer__justifyList">
+        <!--copyright-->
+        <small class="copy">© Таурус 2000, 2007–2012</small>
+        <!--address-->
+        <address class="ftrContacts">
+            <span class="ftrContacts__title">Мы в</span>
+            <div class="ftrContacts__trigger__wrap">
+                <a href="#" class="ftrContacts__trigger m-active">Киеве</a>
+                <a href="#" class="ftrContacts__trigger">Донецке</a>
+            </div>
+            <div class="ftrContacts__info m-active">
+                <span class="ftrContacts__info__phone">+38 044 455-04-52</span>
+                ул. Шепелева, 2
+            </div>
+            <div class="ftrContacts__info">
+                <span class="ftrContacts__info__phone">+38 062 208-39-91</span>
+                ул. Куприна, 121-А
+            </div>
+        </address>
+        <!--social block-->
+        <div class="social">
+            <a href="#" class="social__title">
+                Написать нам
+                <span class="social__title__tooltip">Для быстрого контакта с нами, можно воспользоваться формой обратной связи</span>
+            </a>
+            <ul class="social__buttons">
+                <li><a href="#" class="social__buttons__item item-1"></a>
+                <li><a href="#" class="social__buttons__item item-2"></a>
+                <li><a href="#" class="social__buttons__item item-3"></a>
+                <li><a href="#" class="social__buttons__item item-4"></a>
+                <li><a href="#" class="social__buttons__item item-5"></a>
+            </ul>
         </div>
-        <div class="ftrContacts__info m-active">
-            <span class="ftrContacts__info__phone">+38 044 455-04-52</span>
-            ул. Шепелева, 2
-        </div>
-        <div class="ftrContacts__info">
-            <span class="ftrContacts__info__phone">+38 062 208-39-91</span>
-            ул. Куприна, 121-А
-        </div>
-    </address>
-    <!--social block-->
-    <div class="social">
-        <a href="#" class="social__title">Написать нам</a>
-        <ul class="social__buttons">
-            <li><a href="#" class="social__buttons__item item-1"></a>
-            <li><a href="#" class="social__buttons__item item-2"></a>
-            <li><a href="#" class="social__buttons__item item-3"></a>
-            <li><a href="#" class="social__buttons__item item-4"></a>
-            <li><a href="#" class="social__buttons__item item-5"></a>
-        </ul>
+        <!--creator info-->
+        <a href="http://scona.com.ua/" class="creator" target="_blank" title="Дизайн сайта - Scona Graphics"></a>
     </div>
-    <!--creator info-->
-    <a href="http://scona.com.ua/" class="creator" target="_blank" title="Дизайн сайта - Scona Graphics"></a>
 </footer>
 <!-- END FOOTER -->
 
+<div class="sitemap__overlay" id="sitemap__overlay">
+    <header>
+        <!--<a href="#" class="overlay__close"></a>-->
+        <a href="#" class="sitemap__overlay__link">Весь сайт</a>
+        <span class="sitemap__overlay__location">Вы сейчас находитесь здесь:<span> О компании</span></span>
+    </header>
+    <ul class="sitemap__overlay__mainList">
+        <li><a href="#">Главная страница</a></li>
+        <li>
+            <a class="m-active" href="#">О компании</a>
+            <ul class="sitemap__overlay__subList-1">
+                <li><a href="#">Контактная информация</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Вакансии</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Продукция</a>
+            <ul class="sitemap__overlay__subList-1 m-li_inlineBlock">
+                <li>
+                    <a href="#">Строительный крепеж</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Анкера</a></li>
+                        <li><a href="#">Метрический крепёж</a></li>
+                        <li><a href="#">Специальный крепёж</a></li>
+                        <li><a href="#">Дюбельная техника</a></li>
+                        <li><a href="#">Шурупы и саморезы</a></li>
+                        <li><a href="#">Заклёпки</a></li>
+                        <li><a href="#">Шилинты</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Инструменты</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Биты</a></li>
+                        <li><a href="#">Свёрла</a></li>
+                        <li><a href="#">Круги Luga</a></li>
+                        <li><a href="#">Заклёпочник</a></li>
+                        <li><a href="#">Приспособления Molly</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Снежные цепи</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Декоративные</a></li>
+                        <li><a href="#">Цепи к/з</a></li>
+                        <li><a href="#">Цепи д/з</a></li>
+                        <li><a href="#">Технические цепи</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Хомуты для труб</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">С резиновым вкладишем</a></li>
+                        <li><a href="#">Двойной хомут</a></li>
+                        <li><a href="#">Пластиковый хомут</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Такелаж</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Талрепы</a></li>
+                        <li><a href="#">Зажимы для троса</a></li>
+                        <li><a href="#">Коуши</a></li>
+                        <li><a href="#">Карабины</a></li>
+                        <li><a href="#">Соеденители</a></li>
+                        <li><a href="#">Крюки</a></li>
+                        <li><a href="#">Блоки</a></li>
+                        <li><a href="#">Рым-болты/гайки</a></li>
+                        <li><a href="#">Шплинты</a></li>
+                        <li><a href="#">Элементы талрепов</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Цепи</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Грузовые цепи</a></li>
+                        <li><a href="#">Пластиковые цепи</a></li>
+                        <li><a href="#">Декоративные цепи</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Троса</a>
+                    <ul class="sitemap__overlay__subList-2">
+                        <li><a href="#">Первай вид</a></li>
+                        <li><a href="#">Второй вид</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Способы доставки</a></li>
+    </ul>
+</div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+<script src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
 <script src="js/plugins/bjqs-1.3.min.js"></script>
 <script src="js/main.js"></script>
 
