@@ -17,10 +17,8 @@
 @include h5bp-helpers;
 
 
-//@import "compass/layout";
 @import "compass/css3";
-@import "compass/utilities/links/link-colors";
-@import "compass/utilities/general/clearfix";
+@import "compass/utilities";
 
 @import 'sprites/icons/*.png';
 @import 'sprites/arrows/*.png';
@@ -267,7 +265,7 @@ input,textarea{
   padding:0 10px;
 }
 //main logotype
-.mainLogo{height: $hdrHeight;float: left;padding:0 5px;}
+.mainLogo{height: $hdrHeight;float: left;padding:0 10px 0 0;margin-left: 0px;}
 .mainLogo__link{@include vCtr;}
 /*l-baseHeader__rtBlock*/
 .l-baseHeader__rtBlock{float:right;}
@@ -328,7 +326,11 @@ input,textarea{
 }
 //left column-------------->
 
-.l-columnLt{float: left;width:180px;padding-left: $mainColPadding-l;}
+.l-columnLt{
+  float: left;width:180px;padding-left: $mainColPadding-l;
+  &.m-paddingLt_0{padding-left:0;}
+}
+
 .siteMapLink{
   @include link-service;
   float: left;
@@ -672,7 +674,11 @@ $ftrTopPadding:60px;
 /*DELIVERY page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 .pageDelivery{
-  margin-left:$mainColPadding-l;
+  float: right;
+  width: -webkit-calc(100% - 250px);
+  width: -moz-calc(100% - 250px);
+  width: calc(100% - 250px);
+  margin-left:20px;
   @include contentEditable;
 }
 .pageDelivery__title{@include h1;}
@@ -720,6 +726,7 @@ $ftrTopPadding:60px;
     &.current{
       background: $bgWidgetColor;
       @include link-only-servColor;
+      border-bottom: none;
     }
   }
 }
@@ -815,16 +822,16 @@ $ftrTopPadding:60px;
 ------------------------------------------------------------------------------------------------*/
 .pageProduction{
   position: relative;
-  .breadcrumbs{margin-left: 260px;}
+  .breadcrumbs{margin-left: 250px;}
 }
 .l-pageProduction__leftColumn{
   position: absolute;
   top:-7px;
-  padding-left: 70px;
+  padding-left: 60px;
   width:230px;
 }
 
-.pageProduction__title{@include h1;margin-left: 260px;}
+.pageProduction__title{@include h1;margin-left: 250px;}
 .pageProduction__hexagon{text-align: center;margin-top: 30px;}
 .pageProduction__hexagon__item{
   @include inline-block;
@@ -958,7 +965,7 @@ $ftrTopPadding:60px;
   img{@include border-radius;}
 }
 .pageIndex__news__item{
-  time{display: block;}
+  time{display: block;font-size: 11px;}
   margin-bottom: 10px;
 }
 .pageIndex__info{clear: both; padding:25px 0;}
@@ -1008,16 +1015,23 @@ $ftrTopPadding:60px;
 .pageIndex__slider__item{
   @extend .pageProduction__hexagon__item;
   margin-top:0;
-  &:nth-child(1){margin-top: 90px;}
+  &:nth-child(1){
+    margin-top: 90px;
+    span{left:-40%;}
+  }
   &:nth-child(2){
     margin-top: 100px;
     &:before{bottom:-90px;}
+    span{left:-40%;}
   }
   &:nth-child(3){
     margin-top: 20px;
     &:before{bottom:-75px;}
   }
-  &:nth-child(4){margin-top: 0;}
+  &:nth-child(4){
+    margin-top: 0;
+    span{top:0;left:66%;}
+  }
   &:nth-child(5){
     margin-top: 75px;
     &:before{bottom:-117px;}
@@ -1151,6 +1165,7 @@ p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bot
 */
 .m-mainColumnPadding{padding-left: $mainColPadding-l}
 .m-pt_50{padding-top:50px;}
+.m-marginLt_60{margin-left: 60px;}
 .m-width_230{width:230px;}
 .m-li_inlineBlock>li{
   @include inline-block;vertical-align: top;
