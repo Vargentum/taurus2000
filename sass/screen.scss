@@ -17,10 +17,10 @@
 @include h5bp-helpers;
 
 
-@import "compass/layout";
+//@import "compass/layout";
 @import "compass/css3";
-@import "compass/typography";
-@import "compass/utilities";
+@import "compass/utilities/links/link-colors";
+@import "compass/utilities/general/clearfix";
 
 @import 'sprites/icons/*.png';
 @import 'sprites/arrows/*.png';
@@ -50,7 +50,7 @@ $bgWidgetColor:#e2deca;
 
 //layout params-----------------------
 $baseMinWidth: 960px;
-$baseMaxWidth: 1600px;
+$baseMaxWidth: 1280px;
 $hdrHeight:150px;
 $ftrHeight:145px;
 
@@ -60,14 +60,11 @@ $mainColPadding-l:60px;
 /*MEDIA mixins
 ---------------------------------------------------------*/
 @mixin respond-to($media) {
-  @if $media == handhelds {
-    @media only screen and (max-width: 479px) { @content; }
+  @if $media == old-monitors {
+    @media only screen and (max-width: 1025px) { @content; }
   }
-  @else if $media == wide-handhelds {
-    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
-  }
-  @else if $media == tablets {
-    @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
+  @else if $media == not-old-monitors{
+    @media only screen and (min-width: 1026px) { @content; }
   }
 }
 
@@ -81,8 +78,8 @@ $mainColPadding-l:60px;
     margin: 0 auto;
     min-width: $baseMinWidth;
     max-width: $baseMaxWidth;
-    //@include container;
-    //@include susy-grid-background;
+    padding:0 20px;
+    @include respond-to(not-old-monitors){padding:0 40px;}
   }
   .l-contentWrap{padding-bottom: $ftrHeight*2 !important;}
   .l-baseFooter{
@@ -91,8 +88,8 @@ $mainColPadding-l:60px;
     margin: -$ftrHeight auto 0;
     min-width: $baseMinWidth;
     max-width: $baseMaxWidth;
-    //@include container;
-    //@include susy-grid-background;
+    padding-right: 25px;
+    @include respond-to(not-old-monitors){padding-right: 45px;}
   }
 }
 //headers styles
@@ -363,8 +360,7 @@ input,textarea{
     &:before{
       @include pseudoBlockAbs;
       width:7px; height: 7px;
-      background: #d00010;
-      @include border-radius(50%);
+      background: url(../images/bullet.png);
       left:-11px;
       top:11px;
     }
@@ -382,8 +378,7 @@ input,textarea{
     &:before{
       @include pseudoBlockAbs;
       width:7px; height: 7px;
-      background: #d00010;
-      @include border-radius(50%);
+      background: url(../images/bullet.png);
       left:-11px;
       top:7px;
     }
@@ -409,7 +404,7 @@ input,textarea{
 /*sertificats*/
 .sertificats{
   margin-left: -5px;
-  margin-top: 160px;
+  margin-top: 195px;
 }
 .sertificats__item{
   text-align: center;
@@ -621,7 +616,7 @@ $ftrTopPadding:60px;
 .pageNews__title{@include h1;}
 .pageNews__item{
   margin-bottom: 20px;
-  time{color:$servColor;}
+  time{color:$servColor; font-size: 0.846em;}
 }
 .pageNews__item__title{@include h2Left;margin-top: 0;}
 .pageNews__viewOldNews{@include link-service;}
@@ -742,6 +737,7 @@ $ftrTopPadding:60px;
 /*PRODUCT page specific elements styles
 ------------------------------------------------------------------------------------------------*/
 .pageProduct{
+  margin-left: 10px;
   position: relative;
   @include contentEditable;
   h2{position: static;}
@@ -801,7 +797,7 @@ $ftrTopPadding:60px;
 }
 .pageProduct__draft{margin:30px 0;}
 .pageProduct__photo{
-  margin-top: 5px;
+  margin-top: 20px;
   float: right;
   width:300px; height: 300px;
   .bjqs-markers{list-style: none;}
@@ -834,8 +830,6 @@ $ftrTopPadding:60px;
   @include inline-block;
   vertical-align: top;
   position: relative;
-  @include transition-duration(1s);
-  @include filter(blur(.15em));
   span{
     font-size: 1.385em;
     display: none;
@@ -902,7 +896,6 @@ $ftrTopPadding:60px;
     span{top:auto;bottom:100%;}
   }
   &:hover{
-    @include filter(blur(0));
     z-index: 10;
     span{display: block;opacity: 1;}
   }
@@ -992,6 +985,7 @@ $ftrTopPadding:60px;
 }
 .pageIndex__slider__wrap{
   width:950px;
+  @include respond-to(not-old-monitors){width:1200px;}
   margin: 0 auto;
   .bjqs-prev a{
     text-indent: -9999px;
@@ -1015,10 +1009,19 @@ $ftrTopPadding:60px;
   @extend .pageProduction__hexagon__item;
   margin-top:0;
   &:nth-child(1){margin-top: 90px;}
-  &:nth-child(2){margin-top: 100px;}
-  &:nth-child(3){margin-top: 20px;}
+  &:nth-child(2){
+    margin-top: 100px;
+    &:before{bottom:-90px;}
+  }
+  &:nth-child(3){
+    margin-top: 20px;
+    &:before{bottom:-75px;}
+  }
   &:nth-child(4){margin-top: 0;}
-  &:nth-child(5){margin-top: 75px;}
+  &:nth-child(5){
+    margin-top: 75px;
+    &:before{bottom:-117px;}
+  }
   &:nth-child(6){margin-top: 50px;}
 }
 .pageProduct__photo{}
@@ -1103,6 +1106,47 @@ p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bot
   button{@include button;}
 }
 .contact__overlay__title{@include h2;}
+//purchase overlay (on product page)
+.purchase__overlay{
+  display: none;
+  left:50%;
+  margin-left: -230px;
+  width:460px;
+  padding:10px 20px;
+  @include vidget;
+  background-image: url(../images/bg-vidget.png) !important;
+  >header{@include h2;margin-bottom: 15px;}
+  label{
+    span{
+      display: block;
+      margin-top: 7px;
+      margin-bottom: 3px;
+      font-size: 0.846em;
+      padding: 0 10px;
+    }
+  }
+  input{width:265px;display: block;height: 30px;padding:0 10px;}
+  button{
+    display: inline-block;
+    margin:30px 0 10px;
+    clear: both;
+    @include button;
+  }
+}
+.purchase__overlay__list{
+  @include ul;
+  margin-top: 3px;
+  padding:5px 0 10px;
+  background: #e3e0cc;
+  border-top:1px solid #fff;
+  border-bottom:1px solid #fff;
+  li{
+    margin:5px 0;
+    &:after{content: ';';}
+  }
+}
+.purchase__overlay__list__title{font-size: 0.846em;}
+
 /*MODIFICATORS
 */
 .m-mainColumnPadding{padding-left: $mainColPadding-l}

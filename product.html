@@ -256,7 +256,7 @@
                         </p>
                     </div>
                     <!--add to cart button-->
-                    <a href="#" class="pageProduct__purchase__addLink">Добавить в заказ</a>
+                    <a href="#" rel="#purchase__overlay" class="pageProduct__purchase__addLink">Добавить в заказ</a>
                 </div><!--end purchase-->
                 <div class="pageProduct__draft">
                     <h2>Чертеж</h2>
@@ -414,6 +414,32 @@
 <script src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
 <script src="js/plugins/bjqs-1.3.min.js"></script>
 <script src="js/main.js"></script>
+
+<form class="purchase__overlay" id="purchase__overlay">
+    <a class="close"></a>
+    <header>Оформление заказа</header>
+    <span class="purchase__overlay__list__title">Вы хотите заказать</span>
+    <ul class="purchase__overlay__list">
+        <li>Анкер распорный PSR, M16×220 (1 000 кг)</li>
+        <li>Анкер распорный SRTR, M10×120 (500 кг)</li>
+        <li>Анкер распорный для крепления дверных и оконных проёмов TF, 10×72 (65 кг)</li>
+        <li>Коуш DIN 6899, 6 mm (45 шт.)</li>
+        <li>Коуш DIN 6899, 10 mm (120 шт.)</li>
+        <li>Коуш DIN 6899, 12 mm (300 шт.)</li>
+        <li>Коуш DIN 6899, 14 mm (30 шт.)</li>
+        <li>Коуш DIN 6899, 26 mm (568 шт.)</li>
+    </ul>
+    <label>
+        <span>Ваше имя</span>
+        <input type="text">
+    </label>
+    <label>
+        <span>Ваш телефон или электронная почта</span>
+        <input type="text">
+    </label>
+    <button type="submit">Отправить заказ</button>
+</form>
+
 
 <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
 mathiasbynens.be/notes/async-analytics-snippet -->
