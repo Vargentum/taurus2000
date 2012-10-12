@@ -22,19 +22,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="screen.scss" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="screen.scss" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/sass/screen.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="931" column="9" selection-start="22957" selection-end="22957" vertical-scroll-proportion="0.49101797">
+                <state line="61" column="14" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="delivery.html" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="delivery.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/delivery.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="60" column="21" selection-start="3437" selection-end="3437" vertical-scroll-proportion="0.0">
+                <state line="68" column="19" selection-start="3751" selection-end="3751" vertical-scroll-proportion="0.3404792">
                   <folding />
                 </state>
               </provider>
@@ -62,19 +62,19 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="screen.scss" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="screen.scss" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/sass/screen.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1015" column="40" selection-start="25297" selection-end="25326" vertical-scroll-proportion="0.0">
+                <state line="985" column="5" selection-start="24874" selection-end="24874" vertical-scroll-proportion="0.45149702">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="66" column="53" selection-start="3655" selection-end="3677" vertical-scroll-proportion="0.33291298">
+                <state line="72" column="23" selection-start="3965" selection-end="3965" vertical-scroll-proportion="-5.5">
                   <folding />
                 </state>
               </provider>
@@ -186,7 +186,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,6 +234,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,8 +242,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="taurus2000" serverId="17ff6f57-726f-4a75-93ed-8e4ccab7874e">
     <servers>
@@ -451,13 +451,6 @@
         <state line="193" column="26" selection-start="10130" selection-end="10130" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/delivery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="21" selection-start="3437" selection-end="3437" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sub-category.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="48" selection-start="6742" selection-end="6762" vertical-scroll-proportion="0.0">
@@ -474,14 +467,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="53" selection-start="3655" selection-end="3677" vertical-scroll-proportion="0.33291298">
+        <state line="72" column="23" selection-start="3965" selection-end="3965" vertical-scroll-proportion="-5.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delivery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="19" selection-start="3751" selection-end="3751" vertical-scroll-proportion="0.3404792">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/screen.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="931" column="9" selection-start="22957" selection-end="22957" vertical-scroll-proportion="0.49101797">
+        <state line="985" column="5" selection-start="24874" selection-end="24874" vertical-scroll-proportion="0.45149702">
           <folding />
         </state>
       </provider>

@@ -675,9 +675,12 @@ $ftrTopPadding:60px;
 ------------------------------------------------------------------------------------------------*/
 .pageDelivery{
   float: right;
-  width: -webkit-calc(100% - 250px);
-  width: -moz-calc(100% - 250px);
-  width: calc(100% - 250px);
+  /* when opera will be supports calc -> comment media and uncomment calc */
+  @include respond-to(old-monitors){width:702px;}
+  @include respond-to(not-old-monitors){width:950px;}
+/*  width: -webkit-calc(100% - 250px);*/
+/*  width: -moz-calc(100% - 250px);*/
+/*  width: calc(100% - 250px);*/
   margin-left:20px;
   @include contentEditable;
 }
@@ -937,17 +940,23 @@ $ftrTopPadding:60px;
   padding-left: 40px;
   margin-bottom: 10px;
   float: left;
-  width: calc(100% - 320px);
-  width: -webkit-calc(100% - 320px);
-  width: -moz-calc(100% - 320px);
+  /* when opera will be supports calc -> comment media and uncomment calc */
+  @include respond-to(old-monitors){width:632px;}
+  @include respond-to(not-old-monitors){width:880px;}
+/*  width: calc(100% - 320px);*/
+/*  width: -webkit-calc(100% - 320px);*/
+/*  width: -moz-calc(100% - 320px);*/
 }
 
 .pageIndex__about__title{@include h1;}
 .pageIndex__news{
   float: left;
-  width: calc(100% - 320px);
-  width: -webkit-calc(100% - 320px);
-  width: -moz-calc(100% - 320px);
+  /* when opera will be supports calc -> comment media and uncomment calc */
+  @include respond-to(old-monitors){width:632px;}
+  @include respond-to(not-old-monitors){width:880px;}
+/*  width: calc(100% - 320px);*/
+/*  width: -webkit-calc(100% - 320px);*/
+/*  width: -moz-calc(100% - 320px);*/
 }
 .pageIndex__news__title{@include h2;margin-left: 220px;}
 .pageIndex__newProduction{width:300px;float: right;}
@@ -971,6 +980,9 @@ $ftrTopPadding:60px;
 .pageIndex__info{clear: both; padding:25px 0;}
 .pageIndex__info__text{
   padding-left: 40px;@include inline-block;
+  /* when opera will be supports calc -> comment media and uncomment calc */
+  @include respond-to(old-monitors){width:202px;}
+  @include respond-to(not-old-monitors){width:550px;}
   width: calc(100% - 650px);
   width: -webkit-calc(100% - 650px);
   width: -moz-calc(100% - 650px);
