@@ -723,12 +723,13 @@ $ftrTopPadding:60px;
   ul{@include hList;}
   a{
     display: block;
-    margin:0 12px 0 3px;
+    margin:0 9px 0 0;
+    padding: 2px 3px;
     font-size: 0.846em;
     @include link-service;
     &.current{
       background: $bgWidgetColor;
-      @include link-only-servColor;
+      color:#222;
       border-bottom: none;
     }
   }
@@ -830,7 +831,7 @@ $ftrTopPadding:60px;
 .l-pageProduction__leftColumn{
   position: absolute;
   top:-7px;
-  padding-left: 60px;
+  padding-left: 55px;
   width:230px;
 }
 
@@ -911,7 +912,8 @@ $ftrTopPadding:60px;
   }
 }
 
-.pageProduction__catalogs{margin:30px 0;}
+.pageProduction__catalogs{margin:60px 0 30px;
+  position: relative;left:-15px;}
 .pageProduction__catalogs__item{
   @include inline-block;
   vertical-align: top;
@@ -941,8 +943,8 @@ $ftrTopPadding:60px;
   margin-bottom: 10px;
   float: left;
   /* when opera will be supports calc -> comment media and uncomment calc */
-  @include respond-to(old-monitors){width:632px;}
-  @include respond-to(not-old-monitors){width:880px;}
+  @include respond-to(old-monitors){width:632px;};
+  @include respond-to(not-old-monitors){width:860px;};
 /*  width: calc(100% - 320px);*/
 /*  width: -webkit-calc(100% - 320px);*/
 /*  width: -moz-calc(100% - 320px);*/
@@ -952,8 +954,8 @@ $ftrTopPadding:60px;
 .pageIndex__news{
   float: left;
   /* when opera will be supports calc -> comment media and uncomment calc */
-  @include respond-to(old-monitors){width:632px;}
-  @include respond-to(not-old-monitors){width:880px;}
+  @include respond-to(old-monitors){width:632px;};
+  @include respond-to(not-old-monitors){width:860px;};
 /*  width: calc(100% - 320px);*/
 /*  width: -webkit-calc(100% - 320px);*/
 /*  width: -moz-calc(100% - 320px);*/
@@ -981,11 +983,11 @@ $ftrTopPadding:60px;
 .pageIndex__info__text{
   padding-left: 40px;@include inline-block;
   /* when opera will be supports calc -> comment media and uncomment calc */
-  @include respond-to(old-monitors){width:202px;}
-  @include respond-to(not-old-monitors){width:550px;}
-  width: calc(100% - 650px);
+  @include respond-to(old-monitors){width:305px;};
+  @include respond-to(not-old-monitors){width:520px;};
+/*  width: calc(100% - 650px);
   width: -webkit-calc(100% - 650px);
-  width: -moz-calc(100% - 650px);
+  width: -moz-calc(100% - 650px);*/
 }
 .pageIndex__info__text__title{@include h2;}
 .pageIndex__info__catalogs{text-align: right;@include inline-block;}
